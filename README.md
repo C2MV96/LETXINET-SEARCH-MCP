@@ -21,7 +21,7 @@ pinned: false
 
 **26 academic sources** · **16 MCP tools** · **9-source PDF resolver** · **Bilingual ES/EN** · **Zero AI dependencies**
 
-[🌍 Visit Public Space](https://huggingface.co/spaces/C2MV/letxipu-search-mcp-v3) · [⚡ Live API Endpoint](https://C2MV-letxipu-search-mcp-v3.hf.space/api/mcp) · [🏥 Health Check](https://C2MV-letxipu-search-mcp-v3.hf.space/health) · [📚 Source Catalog](https://C2MV-letxipu-search-mcp-v3.hf.space/api/sources)
+[🌐 Official Website](https://letxinet.lat) · [🌍 Visit Public Space](https://huggingface.co/spaces/C2MV/letxipu-search-mcp-v3) · [⚡ Live API Endpoint](https://C2MV-letxipu-search-mcp-v3.hf.space/api/mcp) · [🏥 Health Check](https://C2MV-letxipu-search-mcp-v3.hf.space/health) · [📚 Source Catalog](https://C2MV-letxipu-search-mcp-v3.hf.space/api/sources)
 
 </div>
 
