@@ -35,11 +35,11 @@ pinned: false
 
 **1. Presentación General de la IA**
 
-[![Reproducir Video](https://img.shields.io/badge/▶_Reproducir_Presentación-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/C2MV96/LETXINET-SEARCH-MCP/raw/main/assets/LetXinet__IA_Investigadora.mp4)
+[![Reproducir Video](https://img.shields.io/badge/▶_Reproducir_Presentación-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/C2MV96/LETXINET-SEARCH-MCP/blob/main/assets/LetXinet__IA_Investigadora.mp4)
 
 **2. Uso de las 16 Herramientas Clave MCP**
 
-[![Reproducir Video](https://img.shields.io/badge/▶_Reproducir_Demostración_Tools-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/C2MV96/LETXINET-SEARCH-MCP/raw/main/assets/IA__16_Herramientas_Clave.mp4)
+[![Reproducir Video](https://img.shields.io/badge/▶_Reproducir_Demostración_Tools-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/C2MV96/LETXINET-SEARCH-MCP/blob/main/assets/IA__16_Herramientas_Clave.mp4)
 
 ---
 
