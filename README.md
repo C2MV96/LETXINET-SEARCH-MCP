@@ -35,10 +35,10 @@ pinned: false
 
 <div align="center">
   <h4>1. Presentación General de la IA</h4>
-  <video src="https://github.com/C2MV96/LETXINET-SEARCH-MCP/raw/main/assets/LetXinet__IA_Investigadora.mp4" controls="controls" muted="muted" style="max-height:640px;" width="80%"></video>
+  <video src="https://raw.githubusercontent.com/C2MV96/LETXINET-SEARCH-MCP/main/assets/LetXinet__IA_Investigadora.mp4" controls="controls" muted="muted" playsinline="playsinline" width="100%"></video>
   
   <h4>2. Uso de las 16 Herramientas Clave MCP</h4>
-  <video src="https://github.com/C2MV96/LETXINET-SEARCH-MCP/raw/main/assets/IA__16_Herramientas_Clave.mp4" controls="controls" muted="muted" style="max-height:640px;" width="80%"></video>
+  <video src="https://raw.githubusercontent.com/C2MV96/LETXINET-SEARCH-MCP/main/assets/IA__16_Herramientas_Clave.mp4" controls="controls" muted="muted" playsinline="playsinline" width="100%"></video>
 </div>
 
 ---
