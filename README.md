@@ -31,6 +31,16 @@ pinned: false
 
 **LetXipu Search MCP v3** is a standalone academic research server optimized for integration with AI assistants (Claude, Cursor, Antigravity) via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io) standard. It is fully adapted to run elegantly on both **GitHub** (local deployment) and **HuggingFace Spaces** (cloud deployment).
 
+### 🎥 Demostración del Agente LetXinet Investigador
+
+<div align="center">
+  <h4>1. Presentación General de la IA</h4>
+  <video src="./assets/LetXinet__IA_Investigadora.mp4" controls width="80%"></video>
+  
+  <h4>2. Uso de las 16 Herramientas Clave MCP</h4>
+  <video src="./assets/IA__16_Herramientas_Clave.mp4" controls width="80%"></video>
+</div>
+
 ---
 
 ## 🚀 Quick Start & Integration
