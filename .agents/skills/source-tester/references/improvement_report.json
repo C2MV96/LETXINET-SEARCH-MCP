@@ -1,0 +1,147 @@
+﻿{
+    "total_peru":  30,
+    "recommended_mirror_order":  [
+                                     "https://sci-hub.mk",
+                                     "https://sci-hub.al",
+                                     "https://sci-hub.su",
+                                     "https://sci-hub.red",
+                                     "https://sci-hub.ru",
+                                     "https://sci-hub.shop",
+                                     "https://sci-hub.st",
+                                     "https://sci-hub.ee",
+                                     "https://sci-hub.box"
+                                 ],
+    "timestamp":  "2026-06-26T23:43:49Z",
+    "actions":  [
+                    "Update SCIHUB_MIRRORS order in pdf-resolver.ts",
+                    "Add 8 new repos to dspace-resolver.ts",
+                    "Review 13 failed Peru repos",
+                    "Review 7 failed LATAM repos"
+                ],
+    "new_repos_to_add":  [
+                             {
+                                 "latency":  201,
+                                 "domain":  "repositorio.upn.edu.pe",
+                                 "name":  "UPN"
+                             },
+                             {
+                                 "latency":  4169,
+                                 "domain":  "repositorio.unas.edu.pe",
+                                 "name":  "UNAS-Tingo Maria"
+                             },
+                             {
+                                 "latency":  4175,
+                                 "domain":  "repositorio.unamba.edu.pe",
+                                 "name":  "UNAMBA-Apurimac"
+                             },
+                             {
+                                 "latency":  2460,
+                                 "domain":  "repositorio.esan.edu.pe",
+                                 "name":  "ESAN"
+                             },
+                             {
+                                 "latency":  123,
+                                 "domain":  "repositorio.up.edu.pe",
+                                 "name":  "UP-Pacifico"
+                             },
+                             {
+                                 "latency":  995,
+                                 "domain":  "repositorio.utec.edu.pe",
+                                 "name":  "UTEC"
+                             },
+                             {
+                                 "latency":  5418,
+                                 "domain":  "repositorio.uarm.edu.pe",
+                                 "name":  "UARM"
+                             },
+                             {
+                                 "latency":  533,
+                                 "domain":  "repositorio.ucsp.edu.pe",
+                                 "name":  "UCSP-Arequipa"
+                             }
+                         ],
+    "failed_sources":  [
+                           {
+                               "name":  "PUCP",
+                               "status":  "timeout"
+                           },
+                           {
+                               "name":  "UNI-Cybertesis",
+                               "status":  "error"
+                           },
+                           {
+                               "name":  "UNPRG-Lambayeque",
+                               "status":  "timeout"
+                           },
+                           {
+                               "name":  "ULIMA",
+                               "status":  "blocked_403"
+                           },
+                           {
+                               "name":  "UPCH-Cayetano",
+                               "status":  "not_found_404"
+                           },
+                           {
+                               "name":  "UCSM-Arequipa",
+                               "status":  "timeout"
+                           },
+                           {
+                               "name":  "UNAP-Puno",
+                               "status":  "error"
+                           },
+                           {
+                               "name":  "UNT-Trujillo",
+                               "status":  "dns_fail"
+                           },
+                           {
+                               "name":  "UNTELS",
+                               "status":  "error"
+                           },
+                           {
+                               "name":  "UNSCH-Ayacucho",
+                               "status":  "dns_fail"
+                           },
+                           {
+                               "name":  "UNH-Huancavelica",
+                               "status":  "timeout"
+                           },
+                           {
+                               "name":  "UANCV-Juliaca",
+                               "status":  "dns_fail"
+                           },
+                           {
+                               "name":  "UJCM-Moquegua",
+                               "status":  "timeout"
+                           },
+                           {
+                               "name":  "SciELO-Global-API",
+                               "status":  "blocked_403"
+                           },
+                           {
+                               "name":  "SciELO-Peru",
+                               "status":  "empty_response"
+                           },
+                           {
+                               "name":  "SciELO-Brasil",
+                               "status":  "not_found_404"
+                           },
+                           {
+                               "name":  "SciELO-Chile",
+                               "status":  "blocked_403"
+                           },
+                           {
+                               "name":  "SciELO-Colombia",
+                               "status":  "timeout"
+                           },
+                           {
+                               "name":  "USP-Teses",
+                               "status":  "blocked_403"
+                           },
+                           {
+                               "name":  "RRAAE",
+                               "status":  "not_found_404"
+                           }
+                       ],
+    "based_on_test":  "2026-06-26T23:40:16Z",
+    "working_peru_count":  17
+}

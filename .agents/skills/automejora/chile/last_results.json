@@ -1,0 +1,142 @@
+﻿{
+    "summary":  {
+                    "blocked":  2,
+                    "error":  1,
+                    "dns_fail":  4,
+                    "working":  8,
+                    "total_tested":  16,
+                    "timeout":  1
+                },
+    "timestamp":  "2026-06-27T00:26:12Z",
+    "repos":  [
+                  {
+                      "size":  34371,
+                      "name":  "UChile",
+                      "notes":  "34KB",
+                      "latency":  2249,
+                      "url":  "https://repositorio.uchile.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "PUC-Chile",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.uc.cl",
+                      "status":  "blocked_403"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "SciELO-Chile",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://www.scielo.cl",
+                      "status":  "blocked_403"
+                  },
+                  {
+                      "size":  4784,
+                      "name":  "USACH",
+                      "notes":  "5KB",
+                      "latency":  1085,
+                      "url":  "https://repositorio.usach.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  480314,
+                      "name":  "UdeC",
+                      "notes":  "469KB",
+                      "latency":  2359,
+                      "url":  "https://repositorio.udec.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UTFSM",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.utfsm.cl",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  36565,
+                      "name":  "UAI",
+                      "notes":  "36KB",
+                      "latency":  679,
+                      "url":  "https://repositorio.uai.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  8708,
+                      "name":  "UDP",
+                      "notes":  "9KB",
+                      "latency":  1208,
+                      "url":  "https://repositorio.udp.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  422317,
+                      "name":  "UCN",
+                      "notes":  "412KB",
+                      "latency":  1352,
+                      "url":  "https://repositorio.ucn.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UACh",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://cybertesis.uach.cl",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UFRO",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ufrontera.cl",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  767594,
+                      "name":  "UBB",
+                      "notes":  "750KB",
+                      "latency":  3079,
+                      "url":  "https://repositorio.ubiobio.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UMAG",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.umag.cl",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  26576,
+                      "name":  "UTEM",
+                      "notes":  "26KB",
+                      "latency":  699,
+                      "url":  "https://repositorio.utem.cl",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UCT",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.uct.cl",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "ANID",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.anid.cl",
+                      "status":  "not_found_404"
+                  }
+              ],
+    "country":  "Chile"
+}

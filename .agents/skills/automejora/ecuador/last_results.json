@@ -1,0 +1,118 @@
+﻿{
+    "summary":  {
+                    "blocked":  0,
+                    "error":  1,
+                    "dns_fail":  0,
+                    "working":  8,
+                    "total_tested":  13,
+                    "timeout":  4
+                },
+    "timestamp":  "2026-06-27T00:27:11Z",
+    "repos":  [
+                  {
+                      "size":  39466,
+                      "name":  "RRAAE",
+                      "notes":  "39KB",
+                      "latency":  1668,
+                      "url":  "https://rraae.cedia.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  26397,
+                      "name":  "ESPOL",
+                      "notes":  "26KB",
+                      "latency":  682,
+                      "url":  "https://www.dspace.espol.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "PUCE",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "http://repositorio.puce.edu.ec",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  14901,
+                      "name":  "UCE",
+                      "notes":  "15KB",
+                      "latency":  1954,
+                      "url":  "http://www.dspace.uce.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  19233,
+                      "name":  "UTPL",
+                      "notes":  "19KB",
+                      "latency":  1711,
+                      "url":  "https://dspace.utpl.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UG",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "http://repositorio.ug.edu.ec",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  41575,
+                      "name":  "USFQ",
+                      "notes":  "41KB",
+                      "latency":  508,
+                      "url":  "https://repositorio.usfq.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  51873,
+                      "name":  "UTN",
+                      "notes":  "51KB",
+                      "latency":  842,
+                      "url":  "http://repositorio.utn.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UTA",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.uta.edu.ec",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  34781,
+                      "name":  "UCSG",
+                      "notes":  "34KB",
+                      "latency":  1258,
+                      "url":  "http://repositorio.ucsg.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  27901,
+                      "name":  "UNACH",
+                      "notes":  "27KB",
+                      "latency":  846,
+                      "url":  "http://dspace.unach.edu.ec",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "ESPE",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "http://repositorio.espe.edu.ec",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UPS",
+                      "notes":  "Error en el servidor remoto: (503) Servidor no disponible.",
+                      "latency":  0,
+                      "url":  "https://dspace.ups.edu.ec",
+                      "status":  "error"
+                  }
+              ],
+    "country":  "Ecuador"
+}

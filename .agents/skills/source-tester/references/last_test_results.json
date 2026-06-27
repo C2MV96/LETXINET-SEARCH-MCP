@@ -1,0 +1,1435 @@
+﻿{
+    "oa_apis":  [
+                    {
+                        "size":  4684,
+                        "name":  "Unpaywall",
+                        "notes":  "5KB",
+                        "latency":  981,
+                        "url":  "https://api.unpaywall.org/v2/10.1038/nature12373?email=test@letxipu.com",
+                        "status":  "working"
+                    },
+                    {
+                        "size":  0,
+                        "name":  "CORE",
+                        "notes":  "Error en el servidor remoto: (429) Too Many Requests.",
+                        "latency":  0,
+                        "url":  "https://api.core.ac.uk/v3/search/works?q=doi:10.1038/nature12373\u0026limit=1",
+                        "status":  "error"
+                    },
+                    {
+                        "size":  174,
+                        "name":  "SemanticScholar",
+                        "notes":  "",
+                        "latency":  703,
+                        "url":  "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/nature12373?fields=openAccessPdf",
+                        "status":  "empty_response"
+                    },
+                    {
+                        "size":  1060,
+                        "name":  "EuropePMC",
+                        "notes":  "1KB",
+                        "latency":  776,
+                        "url":  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nature12373\u0026format=json",
+                        "status":  "working"
+                    },
+                    {
+                        "size":  322360,
+                        "name":  "DOI.org",
+                        "notes":  "315KB",
+                        "latency":  5032,
+                        "url":  "https://doi.org/10.1038/nature12373",
+                        "status":  "working"
+                    },
+                    {
+                        "size":  0,
+                        "name":  "OA.mg",
+                        "notes":  "",
+                        "latency":  0,
+                        "url":  "https://oa.mg/10.1038/nature12373",
+                        "status":  "unavailable_503"
+                    },
+                    {
+                        "size":  29103,
+                        "name":  "OpenAlex",
+                        "notes":  "28KB",
+                        "latency":  1433,
+                        "url":  "https://api.openalex.org/works/doi:10.1038/nature12373",
+                        "status":  "working"
+                    },
+                    {
+                        "size":  13647,
+                        "name":  "CrossRef",
+                        "notes":  "13KB",
+                        "latency":  691,
+                        "url":  "https://api.crossref.org/works/10.1038/nature12373",
+                        "status":  "working"
+                    }
+                ],
+    "summary":  {
+                    "blocked":  7,
+                    "error":  12,
+                    "dns_fail":  14,
+                    "working":  111,
+                    "total_tested":  169,
+                    "timeout":  25
+                },
+    "peru_institutes":  [
+                            {
+                                "size":  36311,
+                                "name":  "CONCYTEC-ALICIA",
+                                "notes":  "35KB",
+                                "latency":  872,
+                                "url":  "https://alicia.concytec.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  4533,
+                                "name":  "RENATI-SUNEDU",
+                                "notes":  "4KB",
+                                "latency":  139,
+                                "url":  "https://renati.sunedu.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  479345,
+                                "name":  "IMARPE",
+                                "notes":  "468KB",
+                                "latency":  1098,
+                                "url":  "https://repositorio.imarpe.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  0,
+                                "name":  "INIA",
+                                "notes":  "",
+                                "latency":  0,
+                                "url":  "https://repositorio.inia.gob.pe",
+                                "status":  "timeout"
+                            },
+                            {
+                                "size":  0,
+                                "name":  "INEN",
+                                "notes":  "",
+                                "latency":  0,
+                                "url":  "https://repositorio.inen.sld.pe",
+                                "status":  "dns_fail"
+                            },
+                            {
+                                "size":  4447,
+                                "name":  "INGEMMET",
+                                "notes":  "4KB",
+                                "latency":  201,
+                                "url":  "https://repositorio.ingemmet.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  456063,
+                                "name":  "IEP",
+                                "notes":  "445KB",
+                                "latency":  2305,
+                                "url":  "https://repositorio.iep.org.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  424765,
+                                "name":  "IIAP",
+                                "notes":  "415KB",
+                                "latency":  2818,
+                                "url":  "https://repositorio.iiap.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  14901,
+                                "name":  "IPEN",
+                                "notes":  "15KB",
+                                "latency":  1346,
+                                "url":  "https://repositorio.ipen.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  831,
+                                "name":  "INDECOPI",
+                                "notes":  "1KB",
+                                "latency":  153,
+                                "url":  "https://repositorio.indecopi.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  26596,
+                                "name":  "MINEDU",
+                                "notes":  "26KB",
+                                "latency":  1173,
+                                "url":  "https://repositorio.minedu.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  4539,
+                                "name":  "MINCULTURA",
+                                "notes":  "4KB",
+                                "latency":  179,
+                                "url":  "https://repositorio.cultura.gob.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  0,
+                                "name":  "EscMilitar",
+                                "notes":  "",
+                                "latency":  0,
+                                "url":  "https://repositorio.escuelamilitar.edu.pe",
+                                "status":  "timeout"
+                            },
+                            {
+                                "size":  4447,
+                                "name":  "Toulouse",
+                                "notes":  "4KB",
+                                "latency":  773,
+                                "url":  "https://repositorio.tls.edu.pe",
+                                "status":  "working"
+                            },
+                            {
+                                "size":  0,
+                                "name":  "Newman",
+                                "notes":  "",
+                                "latency":  0,
+                                "url":  "https://repositorio.epneumann.edu.pe",
+                                "status":  "timeout"
+                            }
+                        ],
+    "latam_repos":  [
+                        {
+                            "size":  0,
+                            "name":  "SciELO-Global",
+                            "notes":  "",
+                            "latency":  0,
+                            "url":  "https://search.scielo.org/?q=machine+learning\u0026count=3",
+                            "status":  "blocked_403"
+                        },
+                        {
+                            "size":  50,
+                            "name":  "SciELO-Peru",
+                            "notes":  "",
+                            "latency":  501,
+                            "url":  "http://www.scielo.org.pe/cgi-bin/wxis.exe/iah/",
+                            "status":  "empty_response"
+                        },
+                        {
+                            "size":  113929,
+                            "name":  "SciELO-Brasil",
+                            "notes":  "111KB",
+                            "latency":  885,
+                            "url":  "https://www.scielo.br",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  0,
+                            "name":  "SciELO-Chile",
+                            "notes":  "",
+                            "latency":  0,
+                            "url":  "https://www.scielo.cl/scielo.php",
+                            "status":  "blocked_403"
+                        },
+                        {
+                            "size":  0,
+                            "name":  "SciELO-Colombia",
+                            "notes":  "",
+                            "latency":  0,
+                            "url":  "http://www.scielo.org.co/scielo.php",
+                            "status":  "timeout"
+                        },
+                        {
+                            "size":  14629,
+                            "name":  "SciELO-Mexico",
+                            "notes":  "14KB",
+                            "latency":  1777,
+                            "url":  "https://www.scielo.org.mx/scielo.php",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  9476,
+                            "name":  "SciELO-Argentina",
+                            "notes":  "9KB",
+                            "latency":  631,
+                            "url":  "http://www.scielo.org.ar/scielo.php",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  21179,
+                            "name":  "SciELO-Preprints",
+                            "notes":  "21KB",
+                            "latency":  857,
+                            "url":  "https://preprints.scielo.org/index.php/scielo/search/search",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  5666,
+                            "name":  "Redalyc",
+                            "notes":  "6KB",
+                            "latency":  602,
+                            "url":  "https://www.redalyc.org/busquedaArticuloFiltros.oa?q=machine+learning",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  1699,
+                            "name":  "CLACSO",
+                            "notes":  "2KB",
+                            "latency":  591,
+                            "url":  "https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/94",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  4384,
+                            "name":  "LaReferencia",
+                            "notes":  "4KB",
+                            "latency":  500,
+                            "url":  "https://www.lareferencia.info/vufind/Search/Results?lookfor=deep+learning\u0026type=AllFields",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  1695,
+                            "name":  "BDTD-Brasil",
+                            "notes":  "2KB",
+                            "latency":  744,
+                            "url":  "https://bdtd.ibict.br/vufind/Search/Results?lookfor=machine+learning",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  64854,
+                            "name":  "Dialnet",
+                            "notes":  "63KB",
+                            "latency":  1988,
+                            "url":  "https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=machine+learning",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  11312,
+                            "name":  "LUME-UFRGS",
+                            "notes":  "11KB",
+                            "latency":  1033,
+                            "url":  "https://lume.ufrgs.br/discover?query=machine+learning",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  39466,
+                            "name":  "RRAAE-Ecuador",
+                            "notes":  "39KB",
+                            "latency":  1056,
+                            "url":  "https://rraae.cedia.edu.ec",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  510565,
+                            "name":  "Repositorio-UNAM-Mexico",
+                            "notes":  "499KB",
+                            "latency":  2512,
+                            "url":  "https://repositorio.unam.mx",
+                            "status":  "working"
+                        },
+                        {
+                            "size":  0,
+                            "name":  "Repositorio-UChile",
+                            "notes":  "",
+                            "latency":  0,
+                            "url":  "https://repositorio.uchile.cl",
+                            "status":  "timeout"
+                        },
+                        {
+                            "size":  2112,
+                            "name":  "Repositorio-UBA-Argentina",
+                            "notes":  "2KB",
+                            "latency":  1245,
+                            "url":  "http://repositoriouba.sisbi.uba.ar",
+                            "status":  "working"
+                        }
+                    ],
+    "test_doi":  "10.1038/nature12373",
+    "peru_escuelas":  [
+
+                      ],
+    "peru_universities":  [
+                              {
+                                  "size":  696,
+                                  "name":  "UNMSM",
+                                  "notes":  "1KB",
+                                  "latency":  338,
+                                  "url":  "https://cybertesis.unmsm.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNI",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://cybertesis.uni.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  380295,
+                                  "name":  "UNSA",
+                                  "notes":  "371KB",
+                                  "latency":  569,
+                                  "url":  "https://repositorio.unsa.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  33602,
+                                  "name":  "UNSAAC",
+                                  "notes":  "33KB",
+                                  "latency":  915,
+                                  "url":  "https://repositorio.unsaac.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4541,
+                                  "name":  "UNAC",
+                                  "notes":  "4KB",
+                                  "latency":  286,
+                                  "url":  "http://repositorio.unac.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  1161,
+                                  "name":  "UNCP",
+                                  "notes":  "1KB",
+                                  "latency":  173,
+                                  "url":  "http://repositorio.uncp.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNPRG",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.unprg.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNT",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://dspace.unitru.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNAP-Puno",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unap.edu.pe",
+                                  "status":  "unavailable_503"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNAS-TingoMaria",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unas.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNAMBA",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unamba.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNH",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unh.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  445441,
+                                  "name":  "UANCV",
+                                  "notes":  "435KB",
+                                  "latency":  1292,
+                                  "url":  "http://repositorio.uancv.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNTELS",
+                                  "notes":  "Error en el servidor remoto: (308) Permanent Redirect.",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.untels.edu.pe",
+                                  "status":  "error"
+                              },
+                              {
+                                  "size":  504137,
+                                  "name":  "UNSCH",
+                                  "notes":  "492KB",
+                                  "latency":  3785,
+                                  "url":  "http://repositorio.unsch.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  585505,
+                                  "name":  "UNFV",
+                                  "notes":  "572KB",
+                                  "latency":  2210,
+                                  "url":  "http://repositorio.unfv.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  8104,
+                                  "name":  "UNALM",
+                                  "notes":  "8KB",
+                                  "latency":  515,
+                                  "url":  "https://repositorio.lamolina.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  41827,
+                                  "name":  "UNDAC",
+                                  "notes":  "41KB",
+                                  "latency":  379,
+                                  "url":  "http://repositorio.undac.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNPiura",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.unp.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  1044,
+                                  "name":  "UNCajamarca",
+                                  "notes":  "1KB",
+                                  "latency":  178,
+                                  "url":  "https://repositorio.unc.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNTumbes",
+                                  "notes":  "No es posible conectar con el servidor remoto",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.untumbes.edu.pe",
+                                  "status":  "error"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNUcayali",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unu.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  31316,
+                                  "name":  "UNSanta",
+                                  "notes":  "31KB",
+                                  "latency":  889,
+                                  "url":  "http://repositorio.uns.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  628,
+                                  "name":  "UNHEVAL",
+                                  "notes":  "1KB",
+                                  "latency":  176,
+                                  "url":  "https://repositorio.unheval.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  570269,
+                                  "name":  "UNJBG-Tacna",
+                                  "notes":  "557KB",
+                                  "latency":  2753,
+                                  "url":  "http://repositorio.unjbg.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  32105,
+                                  "name":  "UNJFSC",
+                                  "notes":  "31KB",
+                                  "latency":  818,
+                                  "url":  "http://repositorio.unjfsc.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNJMA",
+                                  "notes":  "Error en el servidor remoto: (308) Permanent Redirect.",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unajma.edu.pe",
+                                  "status":  "error"
+                              },
+                              {
+                                  "size":  4566,
+                                  "name":  "UNASAM",
+                                  "notes":  "4KB",
+                                  "latency":  260,
+                                  "url":  "http://repositorio.unasam.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4447,
+                                  "name":  "UNTRM",
+                                  "notes":  "4KB",
+                                  "latency":  202,
+                                  "url":  "https://repositorio.untrm.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  430701,
+                                  "name":  "UNIA",
+                                  "notes":  "421KB",
+                                  "latency":  1873,
+                                  "url":  "http://repositorio.unia.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNSLG-Ica",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.unica.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNMoquegua",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unam.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  4551,
+                                  "name":  "UNBarranca",
+                                  "notes":  "4KB",
+                                  "latency":  273,
+                                  "url":  "https://repositorio.unab.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  728,
+                                  "name":  "UNCanete",
+                                  "notes":  "1KB",
+                                  "latency":  257,
+                                  "url":  "https://repositorio.undc.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  646324,
+                                  "name":  "UNFrontera",
+                                  "notes":  "631KB",
+                                  "latency":  5824,
+                                  "url":  "https://repositorio.unf.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNJaen",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.unj.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  433774,
+                                  "name":  "UNJuliaca",
+                                  "notes":  "424KB",
+                                  "latency":  2659,
+                                  "url":  "https://repositorio.unaj.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  472613,
+                                  "name":  "UNChota",
+                                  "notes":  "462KB",
+                                  "latency":  4059,
+                                  "url":  "https://repositorio.unach.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNHuanta",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.unah.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  443123,
+                                  "name":  "UNMusica",
+                                  "notes":  "433KB",
+                                  "latency":  1479,
+                                  "url":  "https://repositorio.unm.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  27822,
+                                  "name":  "UNAAAP-MadreDios",
+                                  "notes":  "27KB",
+                                  "latency":  913,
+                                  "url":  "http://repositorio.unamad.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNDanielAlomia",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.unadah.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  4553,
+                                  "name":  "UNSanMartin",
+                                  "notes":  "4KB",
+                                  "latency":  729,
+                                  "url":  "https://repositorio.unsm.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  430701,
+                                  "name":  "UNIntercultural",
+                                  "notes":  "421KB",
+                                  "latency":  1548,
+                                  "url":  "http://repositorio.unia.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNInterculturalBagua",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.unifslb.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UNArteQuispe",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.undqt.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  751,
+                                  "name":  "PUCP",
+                                  "notes":  "1KB",
+                                  "latency":  699,
+                                  "url":  "https://tesis.pucp.edu.pe/repositorio",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  827,
+                                  "name":  "UPC",
+                                  "notes":  "1KB",
+                                  "latency":  1455,
+                                  "url":  "https://repositorioacademico.upc.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4447,
+                                  "name":  "USMP",
+                                  "notes":  "4KB",
+                                  "latency":  318,
+                                  "url":  "https://repositorio.usmp.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  15947,
+                                  "name":  "USIL",
+                                  "notes":  "16KB",
+                                  "latency":  1383,
+                                  "url":  "https://repositorio.usil.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "ULIMA",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.ulima.edu.pe",
+                                  "status":  "blocked_403"
+                              },
+                              {
+                                  "size":  591747,
+                                  "name":  "UPCH",
+                                  "notes":  "578KB",
+                                  "latency":  1640,
+                                  "url":  "https://repositorio.upch.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  834,
+                                  "name":  "UPN",
+                                  "notes":  "1KB",
+                                  "latency":  254,
+                                  "url":  "https://repositorio.upn.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4558,
+                                  "name":  "UContinental",
+                                  "notes":  "4KB",
+                                  "latency":  605,
+                                  "url":  "https://repositorio.continental.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  520005,
+                                  "name":  "ESAN",
+                                  "notes":  "508KB",
+                                  "latency":  1655,
+                                  "url":  "https://repositorio.esan.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4543,
+                                  "name":  "UP-Pacifico",
+                                  "notes":  "4KB",
+                                  "latency":  120,
+                                  "url":  "https://repositorio.up.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4447,
+                                  "name":  "UTEC",
+                                  "notes":  "4KB",
+                                  "latency":  627,
+                                  "url":  "https://repositorio.utec.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  512893,
+                                  "name":  "UARM",
+                                  "notes":  "501KB",
+                                  "latency":  2977,
+                                  "url":  "https://repositorio.uarm.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4549,
+                                  "name":  "UCSP",
+                                  "notes":  "4KB",
+                                  "latency":  630,
+                                  "url":  "https://repositorio.ucsp.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UCSM",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.ucsm.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  31220,
+                                  "name":  "UCV-CesarVallejo",
+                                  "notes":  "30KB",
+                                  "latency":  1457,
+                                  "url":  "https://repositorio.ucv.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  745,
+                                  "name":  "UPAO-AntenorOrrego",
+                                  "notes":  "1KB",
+                                  "latency":  344,
+                                  "url":  "https://repositorio.upao.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  28402,
+                                  "name":  "ULADECH",
+                                  "notes":  "28KB",
+                                  "latency":  938,
+                                  "url":  "https://repositorio.uladech.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4447,
+                                  "name":  "UPLA-LosAndes",
+                                  "notes":  "4KB",
+                                  "latency":  297,
+                                  "url":  "https://repositorio.upla.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  27472,
+                                  "name":  "USS-SenorDeSipan",
+                                  "notes":  "27KB",
+                                  "latency":  872,
+                                  "url":  "https://repositorio.uss.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  14901,
+                                  "name":  "URP-RicardoPalma",
+                                  "notes":  "15KB",
+                                  "latency":  1261,
+                                  "url":  "https://repositorio.urp.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  26402,
+                                  "name":  "UAP-AlasPeruanas",
+                                  "notes":  "26KB",
+                                  "latency":  1622,
+                                  "url":  "https://repositorio.uap.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  453125,
+                                  "name":  "USAT-SantoToribio",
+                                  "notes":  "443KB",
+                                  "latency":  1667,
+                                  "url":  "https://repositorio.usat.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4502,
+                                  "name":  "UAndina-Cusco",
+                                  "notes":  "4KB",
+                                  "latency":  281,
+                                  "url":  "https://repositorio.uandina.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UAC-Cusco",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.uac.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  4447,
+                                  "name":  "UCSS-SedesSapientiae",
+                                  "notes":  "4KB",
+                                  "latency":  217,
+                                  "url":  "https://repositorio.ucss.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UDEP-Piura",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.udep.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  383869,
+                                  "name":  "USANPEDRO",
+                                  "notes":  "375KB",
+                                  "latency":  2514,
+                                  "url":  "https://repositorio.usanpedro.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  29961,
+                                  "name":  "UCientifica",
+                                  "notes":  "29KB",
+                                  "latency":  1233,
+                                  "url":  "https://repositorio.cientifica.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  653930,
+                                  "name":  "UPeU-PeruanaUnion",
+                                  "notes":  "639KB",
+                                  "latency":  1855,
+                                  "url":  "https://repositorio.upeu.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4545,
+                                  "name":  "UNIFE-Femenina",
+                                  "notes":  "4KB",
+                                  "latency":  215,
+                                  "url":  "https://repositorio.unife.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4550,
+                                  "name":  "UIGV-GarcilasoVega",
+                                  "notes":  "4KB",
+                                  "latency":  179,
+                                  "url":  "https://repositorio.uigv.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  583124,
+                                  "name":  "NorbertWiener",
+                                  "notes":  "569KB",
+                                  "latency":  1146,
+                                  "url":  "https://repositorio.uwiener.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UJCM-Moquegua",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "http://repositorio.ujcm.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  4446,
+                                  "name":  "UPSJB-SanJuanBautista",
+                                  "notes":  "4KB",
+                                  "latency":  222,
+                                  "url":  "https://repositorio.upsjb.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  30144,
+                                  "name":  "UDH-Huanuco",
+                                  "notes":  "29KB",
+                                  "latency":  402,
+                                  "url":  "https://repositorio.udh.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  503337,
+                                  "name":  "UTEA-LosAndes",
+                                  "notes":  "492KB",
+                                  "latency":  2013,
+                                  "url":  "https://repositorio.utea.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  46351,
+                                  "name":  "UAustral-Cusco",
+                                  "notes":  "45KB",
+                                  "latency":  626,
+                                  "url":  "https://repositorio.uaustral.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UPAGU-Cajamarca",
+                                  "notes":  "Se ha terminado la conexión: Error inesperado de envío.",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.upagu.edu.pe",
+                                  "status":  "error"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UCT-Trujillo",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.uct.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UJBM-JuanMejia",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.umb.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UFranklinRoosevelt",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.uroosevelt.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UPrivadaTacna",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.upt.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  31033,
+                                  "name":  "UPrivadaTrujillo",
+                                  "notes":  "30KB",
+                                  "latency":  1724,
+                                  "url":  "https://repositorio.uprit.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  14901,
+                                  "name":  "UCH-CienciasHumanidades",
+                                  "notes":  "15KB",
+                                  "latency":  808,
+                                  "url":  "https://repositorio.uch.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "CIMA",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.cima.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  33179,
+                                  "name":  "LeCordonBleu",
+                                  "notes":  "32KB",
+                                  "latency":  1065,
+                                  "url":  "https://repositorio.ulcb.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4551,
+                                  "name":  "Champagnat",
+                                  "notes":  "4KB",
+                                  "latency":  1326,
+                                  "url":  "https://repositorio.umch.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  4447,
+                                  "name":  "MariaAuxiliadora",
+                                  "notes":  "4KB",
+                                  "latency":  329,
+                                  "url":  "https://repositorio.uma.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  495416,
+                                  "name":  "UDesarrolloAndino",
+                                  "notes":  "484KB",
+                                  "latency":  4105,
+                                  "url":  "https://repositorio.udea.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UPrivadaPucallpa",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.upp.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "USelvaPeruana",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.usp.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "SanAndres",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.usan.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "SantoDomingo",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.usdg.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "PolAmazonica",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.upa.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  29762,
+                                  "name":  "PeruanoCentro",
+                                  "notes":  "29KB",
+                                  "latency":  1214,
+                                  "url":  "https://repositorio.upecen.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "UTelesup",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.telesup.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "PeruanoAlemana",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.upa.edu.pe",
+                                  "status":  "timeout"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "SergioBernales",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.upsb.edu.pe",
+                                  "status":  "dns_fail"
+                              },
+                              {
+                                  "size":  27059,
+                                  "name":  "LaSalle",
+                                  "notes":  "26KB",
+                                  "latency":  649,
+                                  "url":  "https://repositorio.ulasalle.edu.pe",
+                                  "status":  "working"
+                              },
+                              {
+                                  "size":  0,
+                                  "name":  "LeonardoDaVinci",
+                                  "notes":  "",
+                                  "latency":  0,
+                                  "url":  "https://repositorio.uldv.edu.pe",
+                                  "status":  "dns_fail"
+                              }
+                          ],
+    "timestamp":  "2026-06-27T00:28:37Z",
+    "scihub_mirrors":  [
+                           {
+                               "size":  10634,
+                               "name":  "sci-hub.mk",
+                               "notes":  "Has PDF link",
+                               "latency":  1059,
+                               "url":  "https://sci-hub.mk/10.1038/nature12373",
+                               "status":  "working_pdf_link"
+                           },
+                           {
+                               "size":  10601,
+                               "name":  "sci-hub.al",
+                               "notes":  "Has PDF link",
+                               "latency":  989,
+                               "url":  "https://sci-hub.al/10.1038/nature12373",
+                               "status":  "working_pdf_link"
+                           },
+                           {
+                               "size":  7205,
+                               "name":  "sci-hub.ru",
+                               "notes":  "7KB",
+                               "latency":  743,
+                               "url":  "https://sci-hub.ru/10.1038/nature12373",
+                               "status":  "working"
+                           },
+                           {
+                               "size":  7209,
+                               "name":  "sci-hub.su",
+                               "notes":  "7KB",
+                               "latency":  583,
+                               "url":  "https://sci-hub.su/10.1038/nature12373",
+                               "status":  "working"
+                           },
+                           {
+                               "size":  7207,
+                               "name":  "sci-hub.red",
+                               "notes":  "7KB",
+                               "latency":  553,
+                               "url":  "https://sci-hub.red/10.1038/nature12373",
+                               "status":  "working"
+                           },
+                           {
+                               "size":  0,
+                               "name":  "sci-hub.st",
+                               "notes":  "",
+                               "latency":  0,
+                               "url":  "https://sci-hub.st/10.1038/nature12373",
+                               "status":  "blocked_403"
+                           },
+                           {
+                               "size":  0,
+                               "name":  "sci-hub.ee",
+                               "notes":  "",
+                               "latency":  0,
+                               "url":  "https://sci-hub.ee/10.1038/nature12373",
+                               "status":  "blocked_403"
+                           },
+                           {
+                               "size":  27878,
+                               "name":  "sci-hub.shop",
+                               "notes":  "27KB",
+                               "latency":  1055,
+                               "url":  "https://sci-hub.shop/10.1038/nature12373",
+                               "status":  "working"
+                           },
+                           {
+                               "size":  0,
+                               "name":  "sci-hub.pub",
+                               "notes":  "",
+                               "latency":  0,
+                               "url":  "https://sci-hub.pub/10.1038/nature12373",
+                               "status":  "not_found_404"
+                           },
+                           {
+                               "size":  0,
+                               "name":  "sci-hub.box",
+                               "notes":  "",
+                               "latency":  0,
+                               "url":  "https://sci-hub.box/10.1038/nature12373",
+                               "status":  "blocked_403"
+                           }
+                       ],
+    "international":  [
+                          {
+                              "size":  47023,
+                              "name":  "arXiv",
+                              "notes":  "46KB",
+                              "latency":  345,
+                              "url":  "https://arxiv.org/abs/2409.18839",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  4428481,
+                              "name":  "arXiv-PDF",
+                              "notes":  "4325KB",
+                              "latency":  3854,
+                              "url":  "https://arxiv.org/pdf/2409.18839",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  147101,
+                              "name":  "PubMed",
+                              "notes":  "144KB",
+                              "latency":  1512,
+                              "url":  "https://pubmed.ncbi.nlm.nih.gov/23831764/",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  161468,
+                              "name":  "PMC",
+                              "notes":  "158KB",
+                              "latency":  1899,
+                              "url":  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4221854/",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  311966,
+                              "name":  "DBLP",
+                              "notes":  "305KB",
+                              "latency":  2047,
+                              "url":  "https://dblp.org/search?q=transformer",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  1535386,
+                              "name":  "PapersWithCode",
+                              "notes":  "1499KB",
+                              "latency":  2314,
+                              "url":  "https://paperswithcode.com/search?q=transformer",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  0,
+                              "name":  "DOAJ",
+                              "notes":  "",
+                              "latency":  0,
+                              "url":  "https://doaj.org/search/articles?source=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22machine%20learning%22%7D%7D%7D",
+                              "status":  "blocked_403"
+                          },
+                          {
+                              "size":  3336,
+                              "name":  "InternetArchive",
+                              "notes":  "3KB",
+                              "latency":  802,
+                              "url":  "https://archive.org/advancedsearch.php?q=machine+learning\u0026output=json\u0026rows=1",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  24868,
+                              "name":  "OpenAlex-Works",
+                              "notes":  "24KB",
+                              "latency":  1423,
+                              "url":  "https://api.openalex.org/works?search=transformer\u0026per_page=1",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  13647,
+                              "name":  "CrossRef",
+                              "notes":  "13KB",
+                              "latency":  511,
+                              "url":  "https://api.crossref.org/works/10.1038/nature12373",
+                              "status":  "working"
+                          },
+                          {
+                              "size":  371,
+                              "name":  "HuggingFace",
+                              "notes":  "",
+                              "latency":  169,
+                              "url":  "https://huggingface.co/api/models?search=bert\u0026limit=1",
+                              "status":  "empty_response"
+                          },
+                          {
+                              "size":  22,
+                              "name":  "OpenReview",
+                              "notes":  "",
+                              "latency":  478,
+                              "url":  "https://api.openreview.net/notes?content.venue=ICLR+2024\u0026limit=1",
+                              "status":  "empty_response"
+                          }
+                      ],
+    "recommendations":  [
+                            "Mirror order: sci-hub.su, sci-hub.red, sci-hub.shop, sci-hub.mk, sci-hub.al, sci-hub.ru",
+                            "Peru universities: 67/106 working",
+                            "Peru institutes: 11/15 working",
+                            "LATAM repos: 13/18 working",
+                            "International: 9/12 working",
+                            "NEW repos to add to dspace-resolver.ts:",
+                            "  + UANCV -\u003e repositorio.uancv.edu.pe",
+                            "  + UNSCH -\u003e repositorio.unsch.edu.pe",
+                            "  + UNFV -\u003e repositorio.unfv.edu.pe",
+                            "  + UNALM -\u003e repositorio.lamolina.edu.pe",
+                            "  + UNDAC -\u003e repositorio.undac.edu.pe",
+                            "  + UNCajamarca -\u003e repositorio.unc.edu.pe",
+                            "  + UNSanta -\u003e repositorio.uns.edu.pe",
+                            "  + UNHEVAL -\u003e repositorio.unheval.edu.pe",
+                            "  + UNJBG-Tacna -\u003e repositorio.unjbg.edu.pe",
+                            "  + UNJFSC -\u003e repositorio.unjfsc.edu.pe",
+                            "  + UNTRM -\u003e repositorio.untrm.edu.pe",
+                            "  + UNIA -\u003e repositorio.unia.edu.pe",
+                            "  + UNBarranca -\u003e repositorio.unab.edu.pe",
+                            "  + UNCanete -\u003e repositorio.undc.edu.pe",
+                            "  + UNFrontera -\u003e repositorio.unf.edu.pe",
+                            "  + UNJuliaca -\u003e repositorio.unaj.edu.pe",
+                            "  + UNMusica -\u003e repositorio.unm.edu.pe",
+                            "  + UNAAAP-MadreDios -\u003e repositorio.unamad.edu.pe",
+                            "  + UNSanMartin -\u003e repositorio.unsm.edu.pe",
+                            "  + UNIntercultural -\u003e repositorio.unia.edu.pe",
+                            "  + UCV-CesarVallejo -\u003e repositorio.ucv.edu.pe",
+                            "  + UPAO-AntenorOrrego -\u003e repositorio.upao.edu.pe",
+                            "  + ULADECH -\u003e repositorio.uladech.edu.pe",
+                            "  + UPLA-LosAndes -\u003e repositorio.upla.edu.pe",
+                            "  + USS-SenorDeSipan -\u003e repositorio.uss.edu.pe",
+                            "  + URP-RicardoPalma -\u003e repositorio.urp.edu.pe",
+                            "  + UAP-AlasPeruanas -\u003e repositorio.uap.edu.pe",
+                            "  + USAT-SantoToribio -\u003e repositorio.usat.edu.pe",
+                            "  + UAndina-Cusco -\u003e repositorio.uandina.edu.pe",
+                            "  + UCSS-SedesSapientiae -\u003e repositorio.ucss.edu.pe",
+                            "  + USANPEDRO -\u003e repositorio.usanpedro.edu.pe",
+                            "  + UCientifica -\u003e repositorio.cientifica.edu.pe",
+                            "  + UPeU-PeruanaUnion -\u003e repositorio.upeu.edu.pe",
+                            "  + UNIFE-Femenina -\u003e repositorio.unife.edu.pe",
+                            "  + UIGV-GarcilasoVega -\u003e repositorio.uigv.edu.pe",
+                            "  + NorbertWiener -\u003e repositorio.uwiener.edu.pe",
+                            "  + UPSJB-SanJuanBautista -\u003e repositorio.upsjb.edu.pe",
+                            "  + UDH-Huanuco -\u003e repositorio.udh.edu.pe",
+                            "  + UTEA-LosAndes -\u003e repositorio.utea.edu.pe",
+                            "  + UAustral-Cusco -\u003e repositorio.uaustral.edu.pe",
+                            "  + UPrivadaTrujillo -\u003e repositorio.uprit.edu.pe",
+                            "  + UCH-CienciasHumanidades -\u003e repositorio.uch.edu.pe",
+                            "  + LeCordonBleu -\u003e repositorio.ulcb.edu.pe",
+                            "  + Champagnat -\u003e repositorio.umch.edu.pe",
+                            "  + MariaAuxiliadora -\u003e repositorio.uma.edu.pe",
+                            "  + UDesarrolloAndino -\u003e repositorio.udea.edu.pe",
+                            "  + PeruanoCentro -\u003e repositorio.upecen.edu.pe",
+                            "  + LaSalle -\u003e repositorio.ulasalle.edu.pe"
+                        ]
+}

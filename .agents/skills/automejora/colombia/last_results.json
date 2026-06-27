@@ -1,0 +1,134 @@
+﻿{
+    "summary":  {
+                    "blocked":  0,
+                    "error":  2,
+                    "dns_fail":  0,
+                    "working":  12,
+                    "total_tested":  15,
+                    "timeout":  1
+                },
+    "timestamp":  "2026-06-27T00:26:40Z",
+    "repos":  [
+                  {
+                      "size":  769115,
+                      "name":  "UNAL",
+                      "notes":  "751KB",
+                      "latency":  1798,
+                      "url":  "https://repositorio.unal.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  11718,
+                      "name":  "UniAndes",
+                      "notes":  "11KB",
+                      "latency":  990,
+                      "url":  "https://repositorio.uniandes.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "SciELO-Colombia",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "http://www.scielo.org.co",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  11718,
+                      "name":  "UdeA",
+                      "notes":  "11KB",
+                      "latency":  1190,
+                      "url":  "https://bibliotecadigital.udea.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "Javeriana",
+                      "notes":  "Anulada la solicitud: No se puede crear un canal seguro SSL/TLS.",
+                      "latency":  0,
+                      "url":  "https://repository.javeriana.edu.co",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  693466,
+                      "name":  "UIS",
+                      "notes":  "677KB",
+                      "latency":  1416,
+                      "url":  "https://noesis.uis.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  612779,
+                      "name":  "UniValle",
+                      "notes":  "598KB",
+                      "latency":  1825,
+                      "url":  "https://bibliotecadigital.univalle.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "URosario",
+                      "notes":  "Se ha terminado la conexión: Error inesperado de envío.",
+                      "latency":  0,
+                      "url":  "https://repository.urosario.edu.co",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  435830,
+                      "name":  "UPB",
+                      "notes":  "426KB",
+                      "latency":  2985,
+                      "url":  "https://repository.upb.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  373556,
+                      "name":  "EAFIT",
+                      "notes":  "365KB",
+                      "latency":  3353,
+                      "url":  "https://repository.eafit.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  27674,
+                      "name":  "UniNorte",
+                      "notes":  "27KB",
+                      "latency":  1027,
+                      "url":  "https://manglar.uninorte.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  14901,
+                      "name":  "UTP",
+                      "notes":  "15KB",
+                      "latency":  1223,
+                      "url":  "https://repositorio.utp.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  14901,
+                      "name":  "UniCartagena",
+                      "notes":  "15KB",
+                      "latency":  991,
+                      "url":  "https://repositorio.unicartagena.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  677498,
+                      "name":  "USabana",
+                      "notes":  "662KB",
+                      "latency":  1982,
+                      "url":  "https://intellectum.unisabana.edu.co",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  496600,
+                      "name":  "MinCiencias",
+                      "notes":  "485KB",
+                      "latency":  2897,
+                      "url":  "https://repositorio.minciencias.gov.co",
+                      "status":  "working"
+                  }
+              ],
+    "country":  "Colombia"
+}

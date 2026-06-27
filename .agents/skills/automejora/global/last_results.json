@@ -1,0 +1,244 @@
+﻿{
+    "summary":  {
+                    "blocked":  3,
+                    "error":  4,
+                    "dns_fail":  0,
+                    "working":  21,
+                    "total_tested":  28,
+                    "timeout":  0
+                },
+    "timestamp":  "2026-06-27T00:27:58Z",
+    "repos":  {
+                  "international":  [
+                                        {
+                                            "size":  47023,
+                                            "name":  "arXiv",
+                                            "notes":  "46KB",
+                                            "latency":  402,
+                                            "url":  "https://arxiv.org/abs/2409.18839",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  4428481,
+                                            "name":  "arXiv-PDF",
+                                            "notes":  "4325KB",
+                                            "latency":  4545,
+                                            "url":  "https://arxiv.org/pdf/2409.18839",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  147101,
+                                            "name":  "PubMed",
+                                            "notes":  "144KB",
+                                            "latency":  1557,
+                                            "url":  "https://pubmed.ncbi.nlm.nih.gov/23831764/",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  161468,
+                                            "name":  "PMC",
+                                            "notes":  "158KB",
+                                            "latency":  1788,
+                                            "url":  "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4221854/",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  311966,
+                                            "name":  "DBLP",
+                                            "notes":  "305KB",
+                                            "latency":  2054,
+                                            "url":  "https://dblp.org/search?q=transformer",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  1535386,
+                                            "name":  "PapersWithCode",
+                                            "notes":  "1499KB",
+                                            "latency":  2424,
+                                            "url":  "https://paperswithcode.com/search?q=transformer",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  78024,
+                                            "name":  "DOAJ",
+                                            "notes":  "76KB",
+                                            "latency":  987,
+                                            "url":  "https://doaj.org",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  3336,
+                                            "name":  "InternetArchive",
+                                            "notes":  "3KB",
+                                            "latency":  909,
+                                            "url":  "https://archive.org/advancedsearch.php?q=machine+learning\u0026output=json\u0026rows=1",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  172627,
+                                            "name":  "HuggingFace",
+                                            "notes":  "169KB",
+                                            "latency":  287,
+                                            "url":  "https://huggingface.co",
+                                            "status":  "working"
+                                        },
+                                        {
+                                            "size":  918688,
+                                            "name":  "OpenReview",
+                                            "notes":  "897KB",
+                                            "latency":  5777,
+                                            "url":  "https://openreview.net",
+                                            "status":  "working"
+                                        }
+                                    ],
+                  "oa_apis":  [
+                                  {
+                                      "size":  4684,
+                                      "name":  "Unpaywall",
+                                      "notes":  "5KB",
+                                      "latency":  981,
+                                      "url":  "https://api.unpaywall.org/v2/10.1038/nature12373?email=test@letxipu.com",
+                                      "status":  "working"
+                                  },
+                                  {
+                                      "size":  0,
+                                      "name":  "CORE",
+                                      "notes":  "Error en el servidor remoto: (429) Too Many Requests.",
+                                      "latency":  0,
+                                      "url":  "https://api.core.ac.uk/v3/search/works?q=doi:10.1038/nature12373\u0026limit=1",
+                                      "status":  "error"
+                                  },
+                                  {
+                                      "size":  174,
+                                      "name":  "SemanticScholar",
+                                      "notes":  "",
+                                      "latency":  1449,
+                                      "url":  "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/nature12373?fields=openAccessPdf",
+                                      "status":  "empty_response"
+                                  },
+                                  {
+                                      "size":  1060,
+                                      "name":  "EuropePMC",
+                                      "notes":  "1KB",
+                                      "latency":  953,
+                                      "url":  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nature12373\u0026format=json",
+                                      "status":  "working"
+                                  },
+                                  {
+                                      "size":  322362,
+                                      "name":  "DOI.org",
+                                      "notes":  "315KB",
+                                      "latency":  3973,
+                                      "url":  "https://doi.org/10.1038/nature12373",
+                                      "status":  "working"
+                                  },
+                                  {
+                                      "size":  0,
+                                      "name":  "OA.mg",
+                                      "notes":  "Error en el servidor remoto: (503) Servidor no disponible.",
+                                      "latency":  0,
+                                      "url":  "https://oa.mg/10.1038/nature12373",
+                                      "status":  "error"
+                                  },
+                                  {
+                                      "size":  29103,
+                                      "name":  "OpenAlex",
+                                      "notes":  "28KB",
+                                      "latency":  2330,
+                                      "url":  "https://api.openalex.org/works/doi:10.1038/nature12373",
+                                      "status":  "working"
+                                  },
+                                  {
+                                      "size":  13647,
+                                      "name":  "CrossRef",
+                                      "notes":  "13KB",
+                                      "latency":  578,
+                                      "url":  "https://api.crossref.org/works/10.1038/nature12373",
+                                      "status":  "working"
+                                  }
+                              ],
+                  "scihub":  [
+                                 {
+                                     "size":  10634,
+                                     "name":  "sci-hub.mk",
+                                     "notes":  "",
+                                     "latency":  1598,
+                                     "url":  "https://sci-hub.mk/10.1038/nature12373",
+                                     "status":  "working_pdf_link"
+                                 },
+                                 {
+                                     "size":  10601,
+                                     "name":  "sci-hub.al",
+                                     "notes":  "",
+                                     "latency":  1556,
+                                     "url":  "https://sci-hub.al/10.1038/nature12373",
+                                     "status":  "working_pdf_link"
+                                 },
+                                 {
+                                     "size":  7205,
+                                     "name":  "sci-hub.ru",
+                                     "notes":  "7KB",
+                                     "latency":  852,
+                                     "url":  "https://sci-hub.ru/10.1038/nature12373",
+                                     "status":  "working"
+                                 },
+                                 {
+                                     "size":  7209,
+                                     "name":  "sci-hub.su",
+                                     "notes":  "7KB",
+                                     "latency":  718,
+                                     "url":  "https://sci-hub.su/10.1038/nature12373",
+                                     "status":  "working"
+                                 },
+                                 {
+                                     "size":  7209,
+                                     "name":  "sci-hub.red",
+                                     "notes":  "7KB",
+                                     "latency":  659,
+                                     "url":  "https://sci-hub.red/10.1038/nature12373",
+                                     "status":  "working"
+                                 },
+                                 {
+                                     "size":  0,
+                                     "name":  "sci-hub.st",
+                                     "notes":  "",
+                                     "latency":  0,
+                                     "url":  "https://sci-hub.st/10.1038/nature12373",
+                                     "status":  "blocked_403"
+                                 },
+                                 {
+                                     "size":  0,
+                                     "name":  "sci-hub.ee",
+                                     "notes":  "",
+                                     "latency":  0,
+                                     "url":  "https://sci-hub.ee/10.1038/nature12373",
+                                     "status":  "blocked_403"
+                                 },
+                                 {
+                                     "size":  27878,
+                                     "name":  "sci-hub.shop",
+                                     "notes":  "27KB",
+                                     "latency":  1094,
+                                     "url":  "https://sci-hub.shop/10.1038/nature12373",
+                                     "status":  "working"
+                                 },
+                                 {
+                                     "size":  0,
+                                     "name":  "sci-hub.pub",
+                                     "notes":  "",
+                                     "latency":  0,
+                                     "url":  "https://sci-hub.pub/10.1038/nature12373",
+                                     "status":  "not_found_404"
+                                 },
+                                 {
+                                     "size":  0,
+                                     "name":  "sci-hub.box",
+                                     "notes":  "",
+                                     "latency":  0,
+                                     "url":  "https://sci-hub.box/10.1038/nature12373",
+                                     "status":  "blocked_403"
+                                 }
+                             ]
+              },
+    "country":  "Global"
+}

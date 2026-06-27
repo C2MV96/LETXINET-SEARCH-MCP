@@ -1,0 +1,24 @@
+{
+  "name": "letxipu-search-mcp-v7",
+  "version": "7.0.0",
+  "description": "Servidor MCP de búsqueda académica v7 - MinerU AI multi-format (PDF/DOCX/PPTX/XLSX/IMG), 27 tools, 32+ fuentes, OCR 109 idiomas, tablas y fórmulas LaTeX",
+  "private": true,
+  "scripts": {
+    "dev": "npx ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

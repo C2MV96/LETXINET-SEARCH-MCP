@@ -1,0 +1,182 @@
+﻿{
+    "summary":  {
+                    "blocked":  0,
+                    "error":  2,
+                    "dns_fail":  5,
+                    "working":  10,
+                    "total_tested":  21,
+                    "timeout":  4
+                },
+    "timestamp":  "2026-06-27T00:25:52Z",
+    "repos":  [
+                  {
+                      "size":  2112,
+                      "name":  "UBA-SISBI",
+                      "notes":  "2KB",
+                      "latency":  1813,
+                      "url":  "http://repositoriouba.sisbi.uba.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  1699,
+                      "name":  "CLACSO",
+                      "notes":  "2KB",
+                      "latency":  678,
+                      "url":  "https://biblioteca-repositorio.clacso.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  9476,
+                      "name":  "SciELO-Argentina",
+                      "notes":  "9KB",
+                      "latency":  716,
+                      "url":  "http://www.scielo.org.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "CONICET",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://ri.conicet.gov.ar",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  400696,
+                      "name":  "UNC-Cordoba",
+                      "notes":  "391KB",
+                      "latency":  1397,
+                      "url":  "https://rdu.unc.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNR-Rosario",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://rephip.unr.edu.ar",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  29653,
+                      "name":  "UNLP-LaPlata",
+                      "notes":  "29KB",
+                      "latency":  1234,
+                      "url":  "https://sedici.unlp.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  71857,
+                      "name":  "UNL-SantaFe",
+                      "notes":  "70KB",
+                      "latency":  823,
+                      "url":  "https://bibliotecavirtual.unl.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  4484,
+                      "name":  "UNCuyo",
+                      "notes":  "4KB",
+                      "latency":  415,
+                      "url":  "https://bdigital.uncu.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNTREF",
+                      "notes":  "No es posible conectar con el servidor remoto",
+                      "latency":  0,
+                      "url":  "https://repositorio.untref.edu.ar",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  520388,
+                      "name":  "UTN",
+                      "notes":  "508KB",
+                      "latency":  2161,
+                      "url":  "https://ria.utn.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNSAM",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.unsam.edu.ar",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  29790,
+                      "name":  "UNS-BahiaBlanca",
+                      "notes":  "29KB",
+                      "latency":  989,
+                      "url":  "https://repositoriodigital.uns.edu.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNMdP",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.mdp.edu.ar",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "FLACSO",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.flacso.edu.ar",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  12558,
+                      "name":  "INTA",
+                      "notes":  "12KB",
+                      "latency":  1226,
+                      "url":  "https://repositorio.inta.gob.ar",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "MinCyT",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.mincyt.gob.ar",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNQ-Quilmes",
+                      "notes":  "Error en el servidor remoto: (503) Servidor no disponible.",
+                      "latency":  0,
+                      "url":  "https://repositorio.unq.edu.ar",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNGS",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ungs.edu.ar",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNLu",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.unlu.edu.ar",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNER",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.uner.edu.ar",
+                      "status":  "timeout"
+                  }
+              ],
+    "country":  "Argentina"
+}

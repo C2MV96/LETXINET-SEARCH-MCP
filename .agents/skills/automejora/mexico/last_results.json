@@ -1,0 +1,214 @@
+﻿{
+    "summary":  {
+                    "blocked":  1,
+                    "error":  5,
+                    "dns_fail":  7,
+                    "working":  10,
+                    "total_tested":  25,
+                    "timeout":  2
+                },
+    "timestamp":  "2026-06-27T00:28:37Z",
+    "repos":  [
+                  {
+                      "size":  510565,
+                      "name":  "UNAM",
+                      "notes":  "499KB",
+                      "latency":  2508,
+                      "url":  "https://repositorio.unam.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "IPN",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorioinstitucional.ipn.mx",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  14629,
+                      "name":  "SciELO-Mexico",
+                      "notes":  "14KB",
+                      "latency":  1935,
+                      "url":  "https://www.scielo.org.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  130600,
+                      "name":  "Redalyc",
+                      "notes":  "128KB",
+                      "latency":  1496,
+                      "url":  "https://www.redalyc.org",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "ITESM-TEC",
+                      "notes":  "",
+                      "latency":  476,
+                      "url":  "https://repositorio.tec.mx",
+                      "status":  "http_202"
+                  },
+                  {
+                      "size":  472794,
+                      "name":  "UAM",
+                      "notes":  "462KB",
+                      "latency":  2526,
+                      "url":  "https://zaloamati.azc.uam.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UDG",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.udg.mx",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  162168,
+                      "name":  "COLMEX",
+                      "notes":  "158KB",
+                      "latency":  1536,
+                      "url":  "https://repositorio.colmex.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "BUAP",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorioinstitucional.buap.mx",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  412740,
+                      "name":  "UV",
+                      "notes":  "403KB",
+                      "latency":  5697,
+                      "url":  "https://cdigital.uv.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UANL",
+                      "notes":  "Se ha terminado la conexión: Error inesperado de envío.",
+                      "latency":  0,
+                      "url":  "https://eprints.uanl.mx",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UAEM",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorioinstitucional.uaem.mx",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UAQ",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://ri.uaq.mx",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  190,
+                      "name":  "UASLP",
+                      "notes":  "",
+                      "latency":  717,
+                      "url":  "https://repositorioinstitucional.uaslp.mx",
+                      "status":  "empty_response"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UACH",
+                      "notes":  "Se ha terminado la conexión: No se puede establecer una relación de confianza pa",
+                      "latency":  0,
+                      "url":  "https://repositorio.uach.mx",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UNISON",
+                      "notes":  "Se ha terminado la conexión: No se puede establecer una relación de confianza pa",
+                      "latency":  0,
+                      "url":  "https://repositorioinstitucional.unison.mx",
+                      "status":  "error"
+                  },
+                  {
+                      "size":  19572,
+                      "name":  "UADY",
+                      "notes":  "19KB",
+                      "latency":  1186,
+                      "url":  "https://repositorio.uady.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UJAT",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ujat.mx",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "ITAM",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.itam.mx",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "IBERO",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ibero.mx",
+                      "status":  "blocked_403"
+                  },
+                  {
+                      "size":  1194,
+                      "name":  "UIA",
+                      "notes":  "1KB",
+                      "latency":  625,
+                      "url":  "https://repositorio.uia.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "CIDE",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.cide.edu",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  21842,
+                      "name":  "CIESAS",
+                      "notes":  "21KB",
+                      "latency":  879,
+                      "url":  "https://repositorio.ciesas.edu.mx",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "CONACYT",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.conacyt.mx",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  104190,
+                      "name":  "COLEF",
+                      "notes":  "102KB",
+                      "latency":  2231,
+                      "url":  "https://www.colef.mx",
+                      "status":  "working"
+                  }
+              ],
+    "country":  "Mexico"
+}

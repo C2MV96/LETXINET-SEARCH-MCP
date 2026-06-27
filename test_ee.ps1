@@ -1,0 +1,22 @@
+$body = @{
+    jsonrpc = "2.0"
+    id = 1
+    method = "tools/call"
+    params = @{
+        name = "search"
+        arguments = @{
+            query = "estado de emergencia Peru efectividad seguridad ciudadana resultados"
+            sources = @("peru")
+            limit = 5
+        }
+    }
+} | ConvertTo-Json -Depth 5
+
+Write-Host "Buscando efectividad estados de emergencia..."
+$result = Invoke-RestMethod -Uri "https://C2MV-letxipu-search-mcp-v3.hf.space/api/mcp" -Method POST -ContentType "application/json" -Body $body -TimeoutSec 60
+$json = $result.result.content[0].text | ConvertFrom-Json
+$json.data.sources | ForEach-Object {
+    Write-Host "=== $($_.title) ($($_.year))"
+    Write-Host $_.abstract.Substring(0, [Math]::Min(600, $_.abstract.Length))
+    Write-Host ""
+}
