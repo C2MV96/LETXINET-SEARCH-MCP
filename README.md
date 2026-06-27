@@ -1,3 +1,12 @@
+---
+title: LetXipu Search MCP v7
+emoji: 🔬
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # LetXipu Search MCP v7
 
 > **Servidor MCP de busqueda academica + conversion inteligente de documentos**
