@@ -9,38 +9,40 @@ pinned: false
 
 # LetXipu Search MCP v7
 
-![Version](https://img.shields.io/badge/version-7.1-blue)
-![Sources](https://img.shields.io/badge/sources-287+-green)
-![DSpace](https://img.shields.io/badge/DSpace_repos-136-orange)
-![Tools](https://img.shields.io/badge/MCP_tools-27-purple)
+![Version](https://img.shields.io/badge/version-7.0.0-blue)
+![MCP Tools](https://img.shields.io/badge/MCP_tools-27-purple)
+![Sources](https://img.shields.io/badge/sources-39-green)
+![DSpace](https://img.shields.io/badge/DSpace_repos-132-orange)
 ![Node](https://img.shields.io/badge/node-20+-339933)
 ![Docker](https://img.shields.io/badge/docker-ready-2496ED)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-> **Academic search MCP server + intelligent document conversion**
->
-> 27 MCP tools | 32+ sources | MinerU AI | Multi-format | OCR 109 languages | Anti-blocking | 136 LATAM DSpace repos
+LetXipu Search MCP v7 is a Node.js/TypeScript MCP server for academic search, metadata recovery, PDF resolution, and document-to-Markdown conversion. It focuses on Latin American academic repositories while also exposing global sources such as OpenAlex, Semantic Scholar, PubMed, arXiv, Crossref, DBLP, Papers With Code, HuggingFace Daily Papers, and OpenReview.
 
----
+The project can run locally, in Docker, or as a Hugging Face Docker Space. The YAML block above is intentionally kept for Hugging Face Spaces.
 
-## What's New in v7
+## Current Snapshot
 
-| Feature | v6 | v7 |
-|---|---|---|
-| **Document Engine** | pymupdf4llm (Python) | **MinerU AI** (Cloud API) |
-| **Formats** | PDF only | **PDF, DOCX, PPTX, XLSX, Images** |
-| **Python Required** | Yes | **No** |
-| **MCP Tools** | 23 | **27** (+4 new) |
-| **Table Extraction** | Text-based | **ML-based** (StructEqTable) |
-| **Formula Recognition** | None | **LaTeX** (UniMERNet) |
-| **OCR** | None | **109 languages** (PaddleOCR) |
-| **PDF Sources** | 9 fallback | **11 fallback** (+DSpace, Europe PMC) |
-| **User-Agents** | 3 | **18** (Chrome/Firefox/Safari/Edge/Brave/Opera/Vivaldi) |
-| **Anti-Detection** | Basic | **Sec-Fetch, Sec-Ch-Ua, rate limit, circuit breaker** |
-| **DSpace Repos** | 0 | **136** (7 countries) |
-| **Dockerfile** | Node + Python | **Node.js only** |
+| Item | Current value | Source |
+|---|---:|---|
+| Package/server version | 7.0.0 | `package.json`, `src/server.ts` |
+| MCP tools | 27 | `src/routes/mcp.ts` |
+| Search sources | 39 | `src/routes/sources.ts` |
+| Known DSpace repositories | 132 | `src/scraping/dspace-resolver.ts` |
+| Last source-test run | 2026-06-27T00:28:37Z | `.agents/skills/source-tester/references/last_test_results.json` |
+| Last tested sources | 169 | source tester results |
+| Working sources in last run | 111 | source tester results |
 
----
+## What It Does
+
+- Academic search across global, LatAm, country-specific, thesis, and AI/ML source groups.
+- Batch-first search with query expansion and deduplication.
+- Metadata enrichment and recovery from DOI, title, URL, repository handles, DSpace pages, and academic HTML.
+- PDF URL resolution through DOI, OA APIs, repository pages, DSpace handles, PMC, Sci-Hub mirrors, and other fallbacks.
+- PDF reading, section detection, citation extraction, targeted section extraction, and academic analysis.
+- Multi-format document conversion through MinerU when configured: PDF, DOCX, PPTX, XLSX, PNG, JPG, TIFF.
+- Local PDF fallback through MarkItDown/pymupdf4llm when available, then `pdf-parse` as last resort.
+- Source health testing and auto-improvement scripts under `.agents/skills/`.
 
 ## Quick Start
 
@@ -53,608 +55,552 @@ npm install
 npm run build
 ```
 
+On Windows PowerShell, if `npm` is blocked by execution policy, use:
+
+```powershell
+npm.cmd install
+npm.cmd run build
+```
+
 ### 2. Configure
 
-Copy `.env.example` to `.env` and add your API keys:
+Copy `.env.example` to `.env` for local development:
 
 ```bash
 cp .env.example .env
 ```
 
-Required keys:
-```env
-# MinerU (free at mineru.net)
-MINERU_API_KEY=your_token
+Minimum local configuration:
 
-# Optional (enhance results but not required)
-CORE_API_KEY=your_key
-SCOPUS_API_KEY=your_key
-SEMANTIC_SCHOLAR_API_KEY=your_key
-SERP_API_KEY=your_key
+```env
+PORT=4000
 ```
 
-### 3. Configure MCP Client
+Recommended document conversion configuration:
 
-**Claude Desktop** (`claude_desktop_config.json`):
+```env
+MINERU_API_KEY=your_token_here
+MINERU_API_URL=https://mineru.net/api/v4
+```
+
+Optional search/API keys:
+
+```env
+CORE_API_KEY=your_core_key
+SCOPUS_API_KEY=your_scopus_key
+SEMANTIC_SCHOLAR_API_KEY=your_semantic_scholar_key
+SERP_API_KEY=your_serpapi_key_for_/api/search
+SERPAPI_KEY=your_serpapi_key_for_provider_fallback
+HF_TOKEN=your_huggingface_token_if_needed_by_bridge
+OPENREVIEW_USERNAME=optional_openreview_username
+OPENREVIEW_PASSWORD=optional_openreview_password
+SCIHUB_MIRRORS=https://sci-hub.mk,https://sci-hub.al
+MINERU_TIMEOUT=300000
+```
+
+Note: the current code reads both `SERP_API_KEY` in the search route and `SERPAPI_KEY` in the provider. If you use SerpApi, set both until the config contract is unified.
+
+### 3. Run
+
+```bash
+npm start
+```
+
+Development mode:
+
+```bash
+npm run dev
+```
+
+Health check:
+
+```bash
+curl http://localhost:4000/health
+```
+
+Expected shape:
+
+```json
+{
+  "status": "ok",
+  "service": "letxipu-search-mcp",
+  "version": "7.0.0",
+  "tools": 27
+}
+```
+
+## Docker And Hugging Face Spaces
+
+This repository includes a Dockerfile using Node 20:
+
+```bash
+docker build -t letxipu-search .
+docker run -p 7860:7860 --env-file .env letxipu-search
+```
+
+Docker runs with:
+
+```env
+PORT=7860
+NODE_ENV=production
+```
+
+For Hugging Face Spaces, keep the YAML metadata at the top of this README:
+
+```yaml
+---
+title: LetXipu Search MCP v7
+emoji: 🔬
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+```
+
+The Dockerfile exposes port `7860`, which matches Hugging Face Docker Space defaults.
+
+## MCP Client Setup
+
+The bridge is `mcp-bridge.js`. It talks to the HTTP MCP endpoint and translates stdio JSON-RPC for desktop clients.
+
+Important: the bridge currently reads `LETXIPU_URL` or `MCP_API_URL`, not `LETXIPU_MCP_URL`.
+
+### Claude Desktop
+
 ```json
 {
   "mcpServers": {
     "letxipu-search-v7": {
       "command": "node",
-      "args": ["/path/to/mcp-bridge.js"],
+      "args": ["D:/OTROS/LETXIPU-SEARCH-MCP-V7/mcp-bridge.js"],
       "env": {
-        "LETXIPU_MCP_URL": "http://localhost:4000"
+        "LETXIPU_URL": "http://localhost:4000/api/mcp"
       }
     }
   }
 }
 ```
 
-**Cursor** (`.cursor/mcp.json`):
+### Cursor
+
 ```json
 {
   "mcpServers": {
-    "letxipu-search": {
+    "letxipu-search-v7": {
       "command": "node",
-      "args": ["/path/to/mcp-bridge.js"],
-      "env": { "LETXIPU_MCP_URL": "http://localhost:4000" }
+      "args": ["D:/OTROS/LETXIPU-SEARCH-MCP-V7/mcp-bridge.js"],
+      "env": {
+        "LETXIPU_URL": "http://localhost:4000/api/mcp"
+      }
     }
   }
 }
 ```
 
-**Docker**:
-```bash
-docker build -t letxipu-search .
-docker run -p 7860:7860 --env-file .env letxipu-search
+For a remote Hugging Face Space, point `LETXIPU_URL` to:
+
+```text
+https://your-space-url/api/mcp
 ```
 
-### 4. Run
+## HTTP Endpoints
 
-```bash
-npm start          # Production
-npm run dev        # Development (auto-reload)
-```
-
----
-
-## 27 MCP Tools
-
-### Search (7 tools)
-| Tool | Source | API Key |
+| Endpoint | Method | Purpose |
 |---|---|---|
-| `search` | Smart multi-source (combines all) | No |
-| `smart_search` | AI-enhanced with query expansion | No |
-| `search_arxiv` | arXiv preprints (Physics, Math, CS) | No |
-| `search_pubmed` | PubMed biomedical (25M+ articles) | No |
-| `search_openalex` | OpenAlex (250M+ works) | No |
-| `search_semantic_scholar` | Semantic Scholar (200M+ papers) | Optional |
-| `search_dblp` | DBLP computer science bibliography | No |
+| `/health` | GET | Server health and uptime |
+| `/` | GET | Service metadata and endpoint catalog |
+| `/api/search` | POST | Multi-source academic search |
+| `/api/metadata/enrich` | POST | Batch metadata enrichment |
+| `/api/metadata/fetch` | POST | Single-paper metadata fetch |
+| `/api/pdf/download` | POST | PDF URL/download resolution |
+| `/api/pdf/read` | POST | PDF text/Markdown extraction |
+| `/api/pdf/metadata` | POST | PDF metadata extraction |
+| `/api/pdf/sections` | POST | Academic section detection |
+| `/api/pdf/citations` | POST | Citation/reference extraction |
+| `/api/pdf/analyze` | POST | Academic document analysis |
+| `/api/pdf/markdown` | POST | Structured PDF to Markdown |
+| `/api/pdf/summary` | POST | Token-efficient PDF summary |
+| `/api/sources` | GET | Source catalog and source groups |
+| `/api/mcp` | POST | MCP JSON-RPC 2.0 endpoint |
 
-### Latin America (7 tools)
-| Tool | Source | Coverage |
-|---|---|---|
-| `search_alicia` | ALICIA CONCYTEC | Peru - 173+ institutions |
-| `search_renati` | RENATI SUNEDU | Peru - national thesis registry |
-| `search_scielo` | SciELO | 7 countries (BR, MX, AR, CL, CO, PE, preprints) |
-| `search_redalyc` | Redalyc | Latin American journals |
-| `search_clacso` | CLACSO | Social sciences |
-| `search_la_referencia` | La Referencia | LATAM aggregator |
-| `search_dialnet` | Dialnet | Spanish-language research |
+## MCP Tools
 
-### Documents (6 tools)
-| Tool | Description | Engine |
-|---|---|---|
-| `read_pdf` | Read PDF from URL (11-source fallback) | pdf-parse + MinerU |
-| `convert_document` | Convert any doc to Markdown | MinerU AI |
-| `batch_convert` | Batch convert (max 10 docs) | MinerU AI |
-| `extract_tables` | ML-based table extraction | MinerU (StructEqTable) |
-| `extract_formulas` | LaTeX formula extraction | MinerU (UniMERNet) |
-| `get_pdf_metadata` | Extract academic metadata | Built-in |
+### Search And Discovery
 
-### Discovery (7 tools)
-| Tool | Source |
+| Tool | Purpose |
 |---|---|
-| `search_huggingface` | HuggingFace models and datasets |
-| `search_openreview` | OpenReview conference papers |
-| `search_papers_with_code` | Papers With Code benchmarks |
-| `search_internet_archive` | Internet Archive digital library |
-| `search_crossref` | CrossRef DOI metadata (140M+ works) |
-| `check_sources` | Health check all sources |
-| `get_citation` | Get citation (APA/BibTeX/MLA/Chicago) |
+| `batch_search` | Preferred broad search. Runs multiple queries across source groups and deduplicates globally. |
+| `search` | Single-query academic search. |
+| `smart_search` | Generates query variations in Spanish, English, and Portuguese, then deduplicates results. |
+| `search_dblp` | DBLP computer science bibliography search. |
+| `search_paperswithcode` | Papers With Code search for papers, repositories, datasets, methods, and benchmarks. |
+| `trending_papers` | HuggingFace Daily Papers, optionally filtered by topic. |
+| `search_conferences` | OpenReview conference papers. |
+| `list_sources` | Lists source IDs, names, categories, and groups. |
+| `health_check` | Checks source/API connectivity and configured keys. |
+| `help` | Usage help for tools and sources. |
 
----
+### Metadata And PDF Resolution
 
-## PDF Resolution Chain (11 Sources)
-
-When `read_pdf` is called, it tries up to 11 sources to find the full text:
-
-```
-User requests PDF (DOI or URL)
-  |
-  1. Direct URL -----> Fetch the URL directly
-  |   (fail)
-  2. Sci-Hub --------> 7 mirrors: mk, al, ru, su, red, shop, st
-  |   (fail)
-  3. Unpaywall ------> OA location via DOI (api.unpaywall.org)
-  |   (fail)
-  4. CORE -----------> Open access aggregator (200M+ papers)
-  |   (fail)
-  5. Semantic Sch. --> S2 open access PDF link
-  |   (fail)
-  6. DOI.org --------> Follow DOI redirect to publisher
-  |   (fail)
-  7. OA.mg ----------> Open access mirror search
-  |   (fail)
-  8. WeLib -----------> 43M books, 98M papers
-  |   (fail)
-  9. Europe PMC -----> European biomedical literature
-  |   (fail)
-  10. DSpace ---------> 136 LATAM institutional repos
-  |   (fail)
-  11. Google Scholar -> Last resort (strict 20s rate limit)
-```
-
-Each source has retry logic, User-Agent rotation, and circuit breaker protection.
-
----
-
-## Anti-Blocker System
-
-### 18 User-Agent Rotation
-
-Sequential rotation through modern browser signatures:
-
-| Browser | Versions | OS |
-|---|---|---|
-| Chrome | 126, 127, 128 | Windows, macOS, Linux, ChromeOS, Android |
-| Firefox | 127, 128 | Windows, macOS, Linux |
-| Safari | 17.5 | macOS |
-| Edge | 126, 128 | Windows |
-| Brave | 128 | Windows |
-| Opera | 113 | Windows |
-| Vivaldi | 6.8 | Windows |
-
-### Chrome-like Headers
-
-Every request includes realistic browser fingerprint:
-```
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: cross-site
-Sec-Fetch-User: ?1
-Sec-Ch-Ua: "Chromium";v="128", "Google Chrome";v="128"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Ch-Ua-Platform: "Windows"
-Accept-Language: [random: es-PE, es-ES, en-US, pt-BR, es-419]
-```
-
-### Per-Domain Rate Limiting
-
-| Domain | Delay |
+| Tool | Purpose |
 |---|---|
-| `scholar.google.com` | 20,000ms |
-| `www.google.com` | 10,000ms |
-| `api.semanticscholar.org` | 1,000ms |
-| `api.unpaywall.org` | 500ms |
-| All others | 300ms + random jitter |
+| `enrich_metadata` | Batch enrichment for paper metadata. |
+| `fetch_metadata` | Fetch metadata for one DOI, URL, or title. |
+| `recover_metadata` | Deep recovery chain across OpenAlex, Crossref, Semantic Scholar, DSpace, HTML, and ALICIA. |
+| `download_pdf` | Resolve and return a PDF download URL. |
+| `resolve_pdf` | Resolve final PDF URL without downloading. |
 
-### Circuit Breaker
+### PDF And Academic Document Reading
 
-- 3 failures --> domain blocked for 5 minutes
-- Auto-resets after cooldown
-- Prevents wasting time on dead sources
-
-### Retry with Exponential Backoff
-
-- 429/503: 3s, 9s, 27s + jitter
-- 403: Rotate UA + rebuild headers, fallback to insecure fetch
-- SSL errors: Immediate insecure fetch fallback
-- Max 3 retries per request
-
-### Anubis PoW Solver
-
-Solves JavaScript proof-of-work challenges (used by some academic sites):
-1. Extracts salt + difficulty from challenge JSON
-2. Brute-force SHA-256: finds nonce where hash starts with N zeros
-3. Submits solution, extracts auth cookie
-4. Retries request with cookie (up to 2M iterations)
-
-### PMC PoW Solver
-
-Same SHA-256 pattern for PubMed Central challenges:
-- Extracts challenge from HTML response
-- Solves PoW (up to 5M iterations)
-- Sets cookie and re-fetches PDF
-- Double-retry: solves again if second response is another challenge
-
----
-
-## DSpace Repositories -- 136 LATAM Institutions
-
-Automatic PDF resolution from **136 institutional DSpace repositories** across 7 countries:
-
-### Coverage by Country
-
-```
-Peru       ||||||||||||||||||||||||||||||||||||||||||||||||| 85 repos
-Brasil     ||||||||||||||||||||||||||  45 repos (auto-discovered)
-Mexico     ||||||||||||  25 repos (auto-discovered)
-Argentina  |||||||||  21 repos (auto-discovered)
-Chile      ||||||||  16 repos (auto-discovered)
-Colombia   |||||||  15 repos (auto-discovered)
-Ecuador    ||||||  13 repos (auto-discovered)
-```
-
-### Peru (85 repos)
-
-**Universidades Nacionales (40+)**
-UNMSM, PUCP, UNSA, UNSAAC, UNAC, UNCP, UNPRG, UNI, UNICA, UNAP-Puno, UNAS, UANCV, UNSCH, UNFV, UNALM, UNDAC, UNCajamarca, UNSanta, UNHEVAL, UNJBG, UNJFSC, UNTRM, UNIA, UNBarranca, UNCanete, UNFrontera, UNJuliaca, UNMusica, UNAMAD, UNSanMartin, and more.
-
-**Universidades Privadas (35+)**
-USMP, UPC, USIL, UPCH, UPN, UContinental, ESAN, UP-Pacifico, UTEC, UARM, UCSP, UCV, UPAO, ULADECH, UPLA, USS, URP, UAP, USAT, UAndina, UCSS, USanPedro, UCientifica, UPeU, UNIFE, UIGV, NorbertWiener, UPSJB, UDH, UTEA, LeCordonBleu, Champagnat, and more.
-
-**Gobierno e Institutos (9)**
-SUNEDU/RENATI, CONCYTEC, INDECOPI, INGEMMET, IMARPE, MINEDU, MINCULTURA, IEP, IIAP, IPEN.
-
-### Brasil (45 repos)
-USP, UNICAMP, UFRJ, UFMG, UFRGS, UFSC, UNESP, UnB, UFPR, UFBA, UFRN, UFPE, UFC, UFPA, PUC-Rio, PUC-SP, PUC-RS, FIOCRUZ, EMBRAPA, FGV, BDTD, SciELO Brasil, and more.
-
-### Mexico (25 repos)
-UNAM, IPN, ITESM/TEC, UAM, UDG, COLMEX, BUAP, UV, UANL, IBERO, Redalyc, and more.
-
-### Argentina (21 repos)
-UBA, CONICET, UNC, UNLP, UNR, UNCuyo, UTN, CLACSO, INTA, SciELO Argentina, and more.
-
-### Chile (16 repos)
-UChile, PUC, USACH, UdeC, UAI, UDP, UBB, UTEM, SciELO Chile, and more.
-
-### Colombia (15 repos)
-UNAL, UniAndes, UdeA, Javeriana, UIS, UniValle, URosario, EAFIT, and more.
-
-### Ecuador (13 repos)
-ESPOL, PUCE, UCE, UTPL, UG, USFQ, ESPE, UPS, RRAAE, and more.
-
-### How DSpace Resolution Works
-
-```
-URL with /handle/ or /bitstream/ detected
-  |
-  v
-Known repo (136)?
-  |--- YES ---> Optimized bitstream URL construction
-  |--- NO ----> Generic DSpace detection (works with ANY DSpace worldwide)
-  |
-  v
-Fetch handle page HTML
-  |
-  v
-Extract PDF URL (3 patterns):
-  1. Standard bitstream: /bitstream/handle/{id}/filename.pdf
-  2. Generic PDF link: any .pdf href on page
-  3. DSpace 7 REST API: /api/core/bitstreams/{uuid}/content
-  |
-  v
-Download PDF with session headers
-  |
-  v
-Validate: %PDF- magic bytes, min 100 bytes
-```
-
-### Handle Map (89 prefixes)
-
-Resolves `hdl.handle.net` URLs to direct repository URLs:
-- 39 Universidades Nacionales
-- 42 Universidades Privadas
-- 8 Institutos/Government
-
----
-
-## Metadata Extraction
-
-Automatically extracts from any academic page:
-
-| Field | Sources (priority order) |
+| Tool | Purpose |
 |---|---|
-| **Title** | `citation_title`, `dc.title`, `og:title`, `<title>` |
-| **Authors** | `citation_author`, `dc.contributor.author`, `dc.creator` |
-| **Abstract** | `citation_abstract`, `dc.description.abstract`, `og:description` |
-| **Date** | `citation_date`, `dc.date.issued`, `citation_publication_date` |
-| **PDF URL** | `citation_pdf_url`, `eprints.document_url`, `og:url` |
-| **University** | `citation_dissertation_institution`, `dc.publisher` |
+| `read_pdf` | Extract text or Markdown from URL, DOI, or local PDF path. |
+| `pdf_metadata` | Extract PDF title, author, page count, dates, and file size. |
+| `pdf_sections` | Detect abstract, introduction, methods, results, conclusions, references, and related sections. |
+| `pdf_citations` | Extract citations and reference lists. |
+| `analyze_academic` | Detect document type, language, sections, and statistical data. |
+| `extract_section` | Extract one named section with fuzzy Spanish/English matching. |
+| `read_pdf_markdown` | Convert PDF to structured Markdown. |
+| `pdf_smart_summary` | Produce a token-efficient academic summary. |
 
-Supports DSpace 7 SPA auto-detection (Angular apps with `<ds-app>` tag).
+### Document Conversion
 
----
+| Tool | Purpose |
+|---|---|
+| `convert_document` | Convert PDF, DOCX, PPTX, XLSX, PNG, JPG, or TIFF to Markdown through MinerU when configured. |
+| `batch_convert` | Convert up to 10 documents in parallel. |
+| `extract_tables` | Extract tables as HTML or Markdown. |
+| `extract_formulas` | Extract mathematical formulas as LaTeX. |
 
-## MinerU AI Integration
+## Source Catalog
 
-### Supported Formats
+The source catalog currently contains 39 source IDs.
 
-| Format | Extensions | Features |
+### Global And International
+
+| ID | Name | Category |
 |---|---|---|
-| **PDF** | .pdf | Full text, tables, formulas, images, OCR |
-| **Word** | .docx | Text, tables, embedded images |
-| **PowerPoint** | .pptx | Slides to markdown, images |
-| **Excel** | .xlsx | Sheets as markdown tables |
-| **Images** | .png, .jpg, .tiff | OCR text extraction (109 languages) |
+| `semantic` | Semantic Scholar | free |
+| `openalex` | OpenAlex | free |
+| `pubmed` | PubMed | free |
+| `arxiv` | arXiv | free |
+| `scopus` | Scopus | premium |
+| `crossref` | Crossref | free |
+| `doaj` | DOAJ | free |
+| `zenodo` | Zenodo | free |
+| `openaire` | OpenAIRE | free |
+| `core` | CORE | free |
+| `serpapi` | Google Scholar via SerpApi | premium |
+| `dblp` | DBLP | free |
+| `paperswithcode` | Papers With Code | free |
+| `huggingface` | HuggingFace Daily Papers | free |
+| `openreview` | OpenReview | free |
 
-### Modes
+### Latin America, Spain, And Regional Sources
 
-| Mode | Token Required | Limits | Features |
-|---|---|---|---|
-| **Flash** | No | 20 pages / 10MB per file | Basic extraction, IP rate-limited |
-| **Precision** | Yes (free) | 200 pages / 200MB, 5000 pages/day | Full ML pipeline |
-
-### Conversion Pipeline
-
-```
-Document --> MinerU Cloud API
-  |
-  1. Submit task (URL or upload)
-  2. Poll for completion (~10-60s)
-  3. Download result ZIP
-  4. Extract full.md (markdown)
-  |
-  v
-Markdown output with:
-  - Preserved document structure
-  - Tables as HTML/Markdown
-  - Formulas as LaTeX
-  - Images extracted and linked
-  - OCR for scanned content
-```
-
-### Fallback Chain
-
-```
-MinerU API (cloud, best quality)
-  |--- fail --->
-MarkItDown / pymupdf4llm (local Python, if available)
-  |--- fail --->
-pdf-parse npm (basic text extraction, always available)
-```
-
----
-
-## Environment Variables
-
-### Required (for full functionality)
-
-| Variable | Description | Get it at |
+| ID | Name | Country/region |
 |---|---|---|
-| `MINERU_API_KEY` | MinerU document conversion | [mineru.net](https://mineru.net) (free) |
+| `scielo` | SciELO | LatAm/Spain |
+| `redalyc` | Redalyc | LatAm |
+| `alicia` | ALICIA CONCYTEC | Peru |
+| `renati` | RENATI SUNEDU | Peru |
+| `lareferencia` | La Referencia | LatAm |
+| `conacyt` | CONAHCyT | Mexico |
+| `unam` | UNAM | Mexico |
+| `anid` | ANID | Chile |
+| `oasisbr` | Oasisbr | Brazil |
+| `snrd` | SNRD | Argentina |
+| `minciencias` | MinCiencias | Colombia |
+| `bdtd` | BDTD | Brazil |
+| `rraae` | RRAAE | Ecuador |
+| `espana` | Recolecta | Spain |
+| `costarica` | KIMUK | Costa Rica |
+| `uruguay` | Timbo | Uruguay |
+| `elsalvador` | REDICCES | El Salvador |
+| `laref_peru` | La Referencia Peru | Peru |
+| `laref_brasil` | La Referencia Brasil | Brazil |
+| `laref_ecuador` | La Referencia Ecuador | Ecuador |
+| `laref_mexico` | La Referencia Mexico | Mexico |
+| `laref_argentina` | La Referencia Argentina | Argentina |
+| `laref_colombia` | La Referencia Colombia | Colombia |
+| `laref_chile` | La Referencia Chile | Chile |
 
-### Optional (enhance results)
+## Source Groups
 
-| Variable | Description | Get it at |
-|---|---|---|
-| `CORE_API_KEY` | CORE.ac.uk - higher rate limits | [core.ac.uk](https://core.ac.uk/services/api) |
-| `SCOPUS_API_KEY` | Elsevier Scopus - paywall access | [dev.elsevier.com](https://dev.elsevier.com) |
-| `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar - higher limits | [semanticscholar.org](https://www.semanticscholar.org/product/api) |
-| `SERP_API_KEY` | Google Scholar enhanced | [serpapi.com](https://serpapi.com) |
-| `HF_TOKEN` | HuggingFace API access | [huggingface.co](https://huggingface.co/settings/tokens) |
-| `REDALYC_TOKEN` | Redalyc journals | Contact Redalyc |
+Use these groups in `search`, `batch_search`, and `smart_search`:
 
-### Anti-Blocker Configuration
+| Group | Purpose |
+|---|---|
+| `global` | Main global academic APIs. |
+| `latam` | Latin American and regional academic sources. |
+| `iberoamerica` | LatAm plus Spain. |
+| `tesis` | Thesis and institutional repository sources. |
+| `peru`, `brasil`, `mexico`, `argentina`, `chile`, `colombia`, `ecuador` | Country-focused searches. |
+| `centroamerica` | Costa Rica and El Salvador. |
+| `ai_ml` | arXiv, HuggingFace, Papers With Code, OpenReview, DBLP. |
+| `free` | Free sources only. |
+| `premium` | API-key-backed premium sources. |
+| `all` | All registered source IDs. |
 
-| Variable | Default | Description |
-|---|---|---|
-| `SCIHUB_MIRRORS` | Built-in (7) | Comma-separated mirror list |
-| `MINERU_TIMEOUT` | 300000 (5min) | MinerU API timeout in ms |
-| `PORT` | 4000 | Server port (7860 in Docker) |
+Example:
 
-All sources work without API keys (free mode). Keys only improve rate limits and access.
-
----
-
-## Architecture
-
-```
-Claude Desktop / Cursor / Antigravity
-        |
-        | MCP Protocol (stdio)
-        v
-+------------------+
-|  mcp-bridge.js   |  Translates stdio <-> HTTP
-+--------+---------+
-         | HTTP POST
-         v
-+----------------------------------------------------------+
-|  LetXipu Search MCP v7 (Node.js :4000)                   |
-|                                                          |
-|  +--------------+  +----------------------+              |
-|  | 27 MCP Tools |  |  MinerU Client       |              |
-|  | (mcp.ts)     |->|  (mineru-client.ts)  |              |
-|  +--------------+  +----------------------+              |
-|                                                          |
-|  +--------------+  +----------------------+              |
-|  | 32+ Search   |  |  PDF Processor       |              |
-|  | Providers    |  |  (11-source fallback) |              |
-|  +--------------+  +----------------------+              |
-|                                                          |
-|  +----------------------------------------------------+  |
-|  |  Anti-Blocker System                               |  |
-|  |  - resilient-fetch.ts (18 UAs, rate limit)         |  |
-|  |  - anubis-solver.ts (SHA-256 PoW)                  |  |
-|  |  - pmc-solver.ts (PMC PoW)                         |  |
-|  |  - dspace-resolver.ts (136 repos)                  |  |
-|  |  - metadata-extractor.ts (6 fields)                |  |
-|  |  - handle-map.ts (89 prefixes)                     |  |
-|  +----------------------------------------------------+  |
-+----------+---------------+-------------------------------+
-           |               |
-           v               v
-  +--------+------+  +-----+------+
-  | Academic APIs |  | MinerU API |
-  | (32+ sources) |  | (Cloud)    |
-  +---------------+  +------------+
+```json
+{
+  "query": "machine learning mining Peru",
+  "sources": ["latam", "global"],
+  "maxSources": 50,
+  "yearStart": "2020",
+  "yearEnd": "2026"
+}
 ```
 
----
+## PDF Resolution Pipeline
 
-## Source Health (Auto-tested Jun 2026)
+`resolve_pdf`, `download_pdf`, and PDF-reading tools can receive a DOI, URL, repository handle, or local path. The resolver attempts multiple strategies depending on the identifier:
+
+1. Direct URL or local file.
+2. Repository and DSpace handle detection.
+3. DOI and publisher redirect checks.
+4. Open access APIs such as Unpaywall, CORE, Semantic Scholar, Europe PMC, OA.mg, OpenAlex, and Crossref where applicable.
+5. PubMed Central and PMC-specific handling.
+6. Sci-Hub mirror fallback where configured and reachable.
+7. Google Scholar/SerpApi fallback when API keys are available.
+
+Known DSpace repositories are optimized in `src/scraping/dspace-resolver.ts`; unknown DSpace pages still use generic handle and bitstream extraction.
+
+## Document Conversion Pipeline
+
+### With MinerU API Key
+
+When `MINERU_API_KEY` is configured:
+
+1. The document is sent to MinerU Cloud API.
+2. The task is polled until completion.
+3. Markdown and extracted structure are returned.
+4. Tables and formulas can be extracted through the dedicated tools.
+
+Supported formats:
+
+| Type | Extensions |
+|---|---|
+| PDF | `.pdf` |
+| Word | `.docx` |
+| PowerPoint | `.pptx` |
+| Excel | `.xlsx` |
+| Images | `.png`, `.jpg`, `.jpeg`, `.tiff` |
+
+### Without MinerU API Key
+
+PDFs can still use local fallback:
+
+1. MarkItDown/pymupdf4llm, if Python and dependencies are available.
+2. `pdf-parse`, always available as a basic final PDF text fallback.
+
+Non-PDF formats require `MINERU_API_KEY`.
+
+## Last Source-Test Results
+
+Latest stored source-test run:
+
+```text
+timestamp: 2026-06-27T00:28:37Z
+total_tested: 169
+working: 111
+blocked: 7
+timeout: 25
+dns_fail: 14
+error: 12
+```
+
+Breakdown:
 
 | Category | Working | Total | Rate |
-|---|---|---|---|
+|---|---:|---:|---:|
 | Sci-Hub mirrors | 6 | 10 | 60% |
-| OA APIs | 5 | 8 | 63% |
+| Open access APIs | 5 | 8 | 63% |
 | Peru universities | 67 | 106 | 63% |
-| Peru institutes | 11 | 15 | 73% |
-| Brasil | 31 | 46 | 67% |
-| Mexico | 10 | 25 | 40% |
-| Argentina | 10 | 21 | 48% |
-| Chile | 8 | 16 | 50% |
-| Colombia | 12 | 15 | 80% |
-| Ecuador | 8 | 13 | 62% |
-| LATAM aggregators | 13 | 18 | 72% |
-| International | 9 | 12 | 75% |
-| Global sources | 21 | 28 | 75% |
-| **Total** | **211** | **333** | **63%** |
+| Peru institutes/government | 11 | 15 | 73% |
+| LATAM repositories | 13 | 18 | 72% |
+| International sources | 9 | 12 | 75% |
+| **Total** | **111** | **169** | **66%** |
 
----
+These results depend on network conditions, rate limits, DNS availability, and anti-bot blocking at external sites. Re-run source tests before publishing new benchmark claims.
 
-## Auto-Mejora System
+## Test And Validation Commands
 
-Self-improving source testing across 7 countries + global:
+### Build
 
-```bash
-# Test all 287+ sources and auto-improve code
-powershell -ExecutionPolicy Bypass -File ".agents/skills/automejora/run_all.ps1"
+```powershell
+npm.cmd run build
+```
 
-# Single country
+### Start Server
+
+```powershell
+npm.cmd start
+```
+
+### Health
+
+```powershell
+Invoke-RestMethod http://localhost:4000/health
+```
+
+### Source Catalog
+
+```powershell
+Invoke-RestMethod http://localhost:4000/api/sources
+```
+
+### MCP Tools List
+
+```powershell
+$body = @{
+  jsonrpc = "2.0"
+  id = 1
+  method = "tools/list"
+  params = @{}
+} | ConvertTo-Json -Depth 5
+
+Invoke-RestMethod -Uri http://localhost:4000/api/mcp -Method Post -ContentType "application/json" -Body $body
+```
+
+### Basic Search
+
+```powershell
+$body = @{
+  query = "machine learning Peru"
+  sources = @("latam", "global")
+  maxSources = 20
+} | ConvertTo-Json -Depth 5
+
+Invoke-RestMethod -Uri http://localhost:4000/api/search -Method Post -ContentType "application/json" -Body $body
+```
+
+### Source Health And Auto-Improvement
+
+Dry run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ".agents/skills/source-tester/scripts/auto_improve_master.ps1" -DryRun
+```
+
+Full run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ".agents/skills/source-tester/scripts/auto_improve_master.ps1"
+```
+
+Country-focused auto-mejora:
+
+```powershell
 powershell -ExecutionPolicy Bypass -File ".agents/skills/automejora/run_all.ps1" -Country peru
-
-# Dry run (preview changes)
-powershell -ExecutionPolicy Bypass -File ".agents/skills/automejora/run_all.ps1" -DryRun
 ```
 
-Pipeline: Test sources --> Find new working repos --> Add to dspace-resolver.ts --> Build --> Rollback if fails.
+All-country auto-mejora:
 
-```
-automejora/
-+-- run_all.ps1              # Master orchestrator
-+-- shared/test_helpers.ps1  # Reusable Test-Source function
-+-- peru/                    # 121 sources
-+-- brasil/                  # 45 sources
-+-- mexico/                  # 25 sources
-+-- argentina/               # 21 sources
-+-- chile/                   # 16 sources
-+-- colombia/                # 15 sources
-+-- ecuador/                 # 13 sources
-+-- global/                  # 28 sources
+```powershell
+powershell -ExecutionPolicy Bypass -File ".agents/skills/automejora/run_all.ps1"
 ```
 
----
+## README Release Checklist
 
-## Examples
+Before changing badges or benchmark numbers:
 
-### Academic Search
-```
-Tool: search
-Query: "machine learning applied to mining in Peru"
-Result: 47 papers from UNMSM, PUCP, ALICIA, SciELO, Semantic Scholar
-```
+- Run `npm.cmd run build`.
+- Start the server and verify `/health`.
+- Verify `tools/list` returns 27 tools.
+- Verify `/api/sources` returns 39 sources.
+- Run at least one search against `global`, `latam`, and `tesis`.
+- Run `resolve_pdf` on one DOI and one repository URL.
+- Run `read_pdf` on a known open PDF.
+- If documenting MinerU features, test with `MINERU_API_KEY` configured.
+- Re-run source tester and update the timestamp/results table.
+- Keep the Hugging Face YAML front matter at the top.
 
-### Read a Thesis PDF
-```
-Tool: read_pdf
-URL: "https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/12345"
-Result: Full markdown with tables, formulas (LaTeX), 45 pages
-```
+## Troubleshooting
 
-### Convert a Document
-```
-Tool: convert_document
-File: "research_paper.docx"
-Result: Clean markdown with embedded images, tables, and structure
-```
+### PowerShell blocks npm
 
-### Extract Tables
-```
-Tool: extract_tables
-URL: "https://arxiv.org/pdf/2409.18839"
-Result: All tables as HTML/Markdown with ML-based recognition
+Use `npm.cmd`:
+
+```powershell
+npm.cmd run build
 ```
 
----
+### MCP client cannot connect
 
-## Comparison
+Check that:
 
-| Feature | LetXipu v7 | Exa.ai | Semantic Scholar | Google Scholar |
-|---|---|---|---|---|
-| MCP Native | Yes | No | No | No |
-| LATAM Coverage | 136 repos | 0 | Partial | Partial |
-| PDF Download | 11 sources | 0 | 1 | 0 |
-| Anti-Blocking | Full (18 UA, PoW) | N/A | N/A | N/A |
-| Doc Conversion | MinerU AI | No | No | No |
-| Table Extraction | ML-based | No | No | No |
-| Formula OCR | LaTeX | No | No | No |
-| Self-Improving | Yes | No | No | No |
-| Free | Yes | Paid | Free (limited) | Free (blocked) |
+- The server is running on `http://localhost:4000`.
+- The bridge env var is `LETXIPU_URL`.
+- The URL includes `/api/mcp`.
+- `mcp-bridge.js` points to the same checkout you are running.
 
----
+### MinerU tools fail
 
-## FAQ
+Check:
 
-**Do I need a GPU?**
-No. MinerU runs in the cloud. The server is Node.js only.
+- `MINERU_API_KEY` is configured.
+- `MINERU_API_URL` is correct.
+- The document format is supported.
+- For local PDF fallback, Python and pymupdf4llm/MarkItDown dependencies are installed.
 
-**Do I need Python?**
-No. v7 removed the Python dependency. Everything runs on Node.js.
+### Search returns few results
 
-**Does it work without API keys?**
-Yes. All 32+ sources have free mode. API keys only improve rate limits.
+Try:
 
-**How do I add more universities?**
-The auto-mejora system discovers them automatically. Or edit `src/scraping/dspace-resolver.ts`.
+- `batch_search` instead of `search`.
+- Source groups such as `["latam", "global"]` or `["tesis"]`.
+- Spanish, English, and Portuguese query variants.
+- Optional API keys for rate-limited providers.
 
-**What if a source goes down?**
-The circuit breaker blocks it for 5 minutes, then retries. The auto-mejora system tracks trends.
+## Project Structure
 
-**Can it access paywalled papers?**
-It tries 11 sources including Sci-Hub, Unpaywall, CORE, and OA.mg. Success rate depends on the paper.
-
-**What languages does OCR support?**
-109 languages via PaddleOCR through MinerU.
-
----
-
-## Roadmap
-
-- [ ] Venezuela, Bolivia, Paraguay, Uruguay, Cuba repos
-- [ ] Public REST API
-- [ ] Web dashboard for source health monitoring
-- [ ] Zotero integration
-- [ ] Distributed caching
-- [ ] Citation graph analysis
-- [ ] Browser extension
-
----
+```text
+src/
+  providers/        Search providers, PDF resolver, MinerU client, document processors
+  routes/           HTTP routes and MCP JSON-RPC route
+  scraping/         Resilient fetch, DSpace resolver, handle map, metadata extraction
+  types/            Shared TypeScript types
+  utils/            Cache, limits, data-mining config
+scripts/            Python helper scripts
+.agents/skills/     Source tester and auto-mejora workflows
+mcp-bridge.js       stdio to HTTP bridge for MCP clients
+Dockerfile          Hugging Face/Docker runtime
+```
 
 ## Contributing
 
-### Add a new data source
-1. Create provider in `src/providers/`
-2. Export search function
-3. Add MCP tool in `src/routes/mcp.ts`
-4. Add test in `automejora/`
+### Add A Search Source
 
-### Add a new country
-1. Create `automejora/{country}/test_{country}.ps1`
-2. List all university repos
-3. Run `run_all.ps1 -Country {country}`
-4. New repos auto-added to `dspace-resolver.ts`
+1. Add or update a provider in `src/providers/`.
+2. Export it from `src/providers/index.ts`.
+3. Register the source in `src/routes/sources.ts`.
+4. Add MCP tool wiring in `src/routes/mcp.ts` if it needs a dedicated tool.
+5. Run `npm.cmd run build`.
+6. Add or update source tests under `.agents/skills/`.
 
-### Report dead sources
-Run the auto-mejora pipeline and check results in `last_results.json`.
+### Add A DSpace Repository
 
----
+1. Add the repository metadata in `src/scraping/dspace-resolver.ts`.
+2. Include name, domain, handle prefix, and bitstream pattern.
+3. Test one handle page and one PDF bitstream.
+4. Run `npm.cmd run build`.
+5. Re-run source tester and update README metrics only after the run succeeds.
+
+## Roadmap
+
+- Normalize environment variable names and document aliases in one place.
+- Generate README tool/source tables automatically from TypeScript constants.
+- Add automated MCP smoke tests.
+- Add a web dashboard for source health.
+- Add Zotero/BibTeX export workflows.
+- Add citation graph exploration.
+- Expand repository coverage for Bolivia, Paraguay, Venezuela, Cuba, and more Central America.
 
 ## License
 
-MIT
+MIT. See `LICENSE`.
 
----
-
-Built with Node.js, TypeScript, Express, MinerU AI, and the power of open access.
