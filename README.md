@@ -501,7 +501,7 @@ Claude Desktop / Cursor / Antigravity
 | OA APIs | 5 | 8 | 63% |
 | Peru universities | 67 | 106 | 63% |
 | Peru institutes | 11 | 15 | 73% |
-| Brasil | pending | 45 | - |
+| Brasil | 31 | 46 | 67% |
 | Mexico | 10 | 25 | 40% |
 | Argentina | 10 | 21 | 48% |
 | Chile | 8 | 16 | 50% |
@@ -509,7 +509,8 @@ Claude Desktop / Cursor / Antigravity
 | Ecuador | 8 | 13 | 62% |
 | LATAM aggregators | 13 | 18 | 72% |
 | International | 9 | 12 | 75% |
-| **Total** | **180** | **287** | **63%** |
+| Global sources | 21 | 28 | 75% |
+| **Total** | **211** | **333** | **63%** |
 
 ---
 

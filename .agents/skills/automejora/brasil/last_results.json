@@ -1,0 +1,382 @@
+﻿{
+    "summary":  {
+                    "blocked":  2,
+                    "error":  2,
+                    "dns_fail":  5,
+                    "working":  31,
+                    "total_tested":  46,
+                    "timeout":  6
+                },
+    "timestamp":  "2026-06-27T01:17:21Z",
+    "repos":  [
+                  {
+                      "size":  301,
+                      "name":  "BDTD",
+                      "notes":  "",
+                      "latency":  1147,
+                      "url":  "https://bdtd.ibict.br",
+                      "status":  "empty_response"
+                  },
+                  {
+                      "size":  113929,
+                      "name":  "SciELO-Brasil",
+                      "notes":  "111KB",
+                      "latency":  640,
+                      "url":  "https://www.scielo.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "USP-Repositorio",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.usp.br",
+                      "status":  "blocked_403"
+                  },
+                  {
+                      "size":  17473,
+                      "name":  "USP-Teses",
+                      "notes":  "17KB",
+                      "latency":  1752,
+                      "url":  "https://teses.usp.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  29749,
+                      "name":  "UNICAMP",
+                      "notes":  "29KB",
+                      "latency":  854,
+                      "url":  "https://repositorio.unicamp.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UFRJ-Pantheon",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://pantheon.ufrj.br",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  533763,
+                      "name":  "UFMG",
+                      "notes":  "521KB",
+                      "latency":  2642,
+                      "url":  "https://repositorio.ufmg.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  39340,
+                      "name":  "UFRGS-LUME",
+                      "notes":  "38KB",
+                      "latency":  1243,
+                      "url":  "https://lume.ufrgs.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  981,
+                      "name":  "UFSC",
+                      "notes":  "1KB",
+                      "latency":  725,
+                      "url":  "https://repositorio.ufsc.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  440362,
+                      "name":  "UNESP",
+                      "notes":  "430KB",
+                      "latency":  2550,
+                      "url":  "https://repositorio.unesp.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  24451,
+                      "name":  "UnB",
+                      "notes":  "24KB",
+                      "latency":  1182,
+                      "url":  "https://repositorio.unb.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  31562,
+                      "name":  "UFPR",
+                      "notes":  "31KB",
+                      "latency":  4287,
+                      "url":  "https://acervodigital.ufpr.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  3691,
+                      "name":  "UFBA",
+                      "notes":  "4KB",
+                      "latency":  867,
+                      "url":  "https://repositorio.ufba.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  4213,
+                      "name":  "UFRN",
+                      "notes":  "4KB",
+                      "latency":  701,
+                      "url":  "https://repositorio.ufrn.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  34211,
+                      "name":  "UFPE",
+                      "notes":  "33KB",
+                      "latency":  3301,
+                      "url":  "https://repositorio.ufpe.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  42636,
+                      "name":  "UFC",
+                      "notes":  "42KB",
+                      "latency":  2773,
+                      "url":  "https://repositorio.ufc.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  338990,
+                      "name":  "UFPA",
+                      "notes":  "331KB",
+                      "latency":  1907,
+                      "url":  "https://repositorio.ufpa.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  42614,
+                      "name":  "UFPB",
+                      "notes":  "42KB",
+                      "latency":  937,
+                      "url":  "https://repositorio.ufpb.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  444667,
+                      "name":  "UFG",
+                      "notes":  "434KB",
+                      "latency":  1912,
+                      "url":  "https://repositorio.bc.ufg.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  592775,
+                      "name":  "UFES",
+                      "notes":  "579KB",
+                      "latency":  4999,
+                      "url":  "https://repositorio.ufes.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  513790,
+                      "name":  "UFSCar",
+                      "notes":  "502KB",
+                      "latency":  3195,
+                      "url":  "https://repositorio.ufscar.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UFMS",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ufms.br",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UFAL",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ufal.br",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  30293,
+                      "name":  "UFF-RIUFF",
+                      "notes":  "30KB",
+                      "latency":  955,
+                      "url":  "https://app.uff.br/riuff",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  31631,
+                      "name":  "UFAM-TEDE",
+                      "notes":  "31KB",
+                      "latency":  1215,
+                      "url":  "https://tede.ufam.edu.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  93,
+                      "name":  "UFJF",
+                      "notes":  "",
+                      "latency":  1155,
+                      "url":  "https://repositorio.ufjf.br",
+                      "status":  "empty_response"
+                  },
+                  {
+                      "size":  33597,
+                      "name":  "UFMA",
+                      "notes":  "33KB",
+                      "latency":  1462,
+                      "url":  "https://tedebc.ufma.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  526725,
+                      "name":  "UFV",
+                      "notes":  "514KB",
+                      "latency":  2147,
+                      "url":  "https://locus.ufv.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  14826,
+                      "name":  "UFPI",
+                      "notes":  "14KB",
+                      "latency":  1735,
+                      "url":  "https://repositorio.ufpi.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UFMT",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://ri.ufmt.br",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  630961,
+                      "name":  "UFOP",
+                      "notes":  "616KB",
+                      "latency":  2266,
+                      "url":  "https://repositorio.ufop.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UFSM",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.ufsm.br",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  485558,
+                      "name":  "FURG",
+                      "notes":  "474KB",
+                      "latency":  2238,
+                      "url":  "https://repositorio.furg.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  52048,
+                      "name":  "UTFPR",
+                      "notes":  "51KB",
+                      "latency":  2018,
+                      "url":  "https://repositorio.utfpr.edu.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  471817,
+                      "name":  "UNIFESP",
+                      "notes":  "461KB",
+                      "latency":  1888,
+                      "url":  "https://repositorio.unifesp.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "UERJ",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://www.bdtd.uerj.br",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  492351,
+                      "name":  "UEL",
+                      "notes":  "481KB",
+                      "latency":  2576,
+                      "url":  "https://repositorio.uel.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "PUC-Rio",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://maxwell.vrac.puc-rio.br",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  29068,
+                      "name":  "PUC-SP",
+                      "notes":  "28KB",
+                      "latency":  693,
+                      "url":  "https://repositorio.pucsp.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  1634,
+                      "name":  "PUC-RS",
+                      "notes":  "2KB",
+                      "latency":  1041,
+                      "url":  "https://repositorio.pucrs.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "PUC-MG",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.pucminas.br",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "FIOCRUZ-ARCA",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://arca.fiocruz.br",
+                      "status":  "blocked_403"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "EMBRAPA",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://repositorio.embrapa.br",
+                      "status":  "dns_fail"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "INPE",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://urlib.net/sid.inpe.br",
+                      "status":  "timeout"
+                  },
+                  {
+                      "size":  4405,
+                      "name":  "FGV",
+                      "notes":  "4KB",
+                      "latency":  867,
+                      "url":  "https://repositorio.fgv.br",
+                      "status":  "working"
+                  },
+                  {
+                      "size":  0,
+                      "name":  "Mackenzie",
+                      "notes":  "",
+                      "latency":  0,
+                      "url":  "https://tede.mackenzie.br",
+                      "status":  "dns_fail"
+                  }
+              ],
+    "country":  "Brasil"
+}
